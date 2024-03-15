@@ -18,7 +18,41 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            allStations()
+            stationsList()
+        }
+    }
+    
+    func search() {
+        let client = Client(
+            serverURL: try! Servers.server1(),
+            transport: URLSessionTransport()
+        )
+        
+        let service = RoutesSearchService(
+            client: client,
+            apikey: "7d220a15-1afd-4a2a-871d-cd218423f194"
+        )
+        
+        Task {
+            let stations = try await service.search(from: "s9600216", to: "s9600213", date: "2024-03-17")
+            print(stations)
+        }
+    }
+    
+    func stationsList() {
+        let client = Client(
+            serverURL: try! Servers.server1(),
+            transport: URLSessionTransport()
+        )
+        
+        let service = AllStationsService(
+            client: client,
+            apikey: "7d220a15-1afd-4a2a-871d-cd218423f194"
+        )
+        
+        Task {
+            let stations = try await service.get()
+            print(stations)
         }
     }
     
