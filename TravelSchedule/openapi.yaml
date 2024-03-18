@@ -508,7 +508,7 @@ paths:
         "200":
           description: success
           content:
-            application/json:
+            text/html:
               schema:
                 $ref: '#/components/schemas/ListOfStations'
   /v3.0/copyright/:
@@ -603,284 +603,253 @@ components:
         copyright:
           $ref: '#/components/schemas/Copyright'
     Copyright:
-        type: object
-        properties:
-          logo_vm:
-            type: string
-          url:
-            type: string
-          logo_vd:
-            type: string
-          logo_hy:
-            type: string
-          logo_hd:
-            type: string
-          logo_vy:
-            type: string
-          text:
-            type: string
-          logo_hm:
-            type: string
+      type: object
+      properties:
+        logo_vm:
+          type: string
+        url:
+          type: string
+        logo_vd:
+          type: string
+        logo_hy:
+          type: string
+        logo_hd:
+          type: string
+        logo_vy:
+          type: string
+        text:
+          type: string
+        logo_hm:
+          type: string
     ListOfStations:
-        type: object
-        properties:
-          countries:
-            type: array
-            items:
-                $ref: '#/components/schemas/Country'
+      type: object
+      properties:
+        countries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Country'
     Country:
-        type: object
-        properties:
-          title:
-            type: string
-          codes:
-            type: string
-          regions:
-            type: array
-            items:
-                $ref: '#/components/schemas/Region'
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/StationCode'
+        regions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Region'
     Region:
-        type: object
-        properties:
-          title:
-            type: string
-          codes:
-            type: string
-          setlements:
-            type: array
-            items:
-                $ref: '#/components/schemas/SingleSettlement'
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/StationCode'
+        settlements:
+          type: array
+          items:
+            $ref: '#/components/schemas/SingleSettlement'
     SingleSettlement:
-        type: object
-        properties:
-          title:
-            type: string
-          codes:
-            type: string
-          stations:
-            type: array
-            items:
-                $ref: '#/components/schemas/DetailedStation'
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/StationCode'
+        stations:
+          type: array
+          items:
+            $ref: '#/components/schemas/DetailedStation'
     DetailedStation:
-        type: object
-        properties:
-          title:
-            type: string
-          codes:
-            type: array
-            items:
-              $ref: '#/components/schemas/StationCode'
-          direction:
-            type: string
-          longitude:
-            type: number
-          latitude:
-            type: number
-          transport_type:
-            type: string
-            enum:
-                - plane
-                - train
-                - suburban
-                - bus
-                - water
-                - helicopter
-          station_type:
-            type: string
-            enum:
-                - station
-                - stop
-                - platform
-                - checkpoint
-                - post
-                - crossing
-                - overtaking_point
-                - train_station
-                - airport
-                - bus_station
-                - bus_stop
-                - unknown
-                - port
-                - port_point
-                - wharf
-                - river_port
-                - marine_station
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/StationCode'
+        direction:
+          type: string
+        transport_type:
+          type: string
+        station_type:
+          type: string
     StationCode:
-        type: object
-        properties:
-          esr_code:
-            type: string
-          yandex_code:
-            type: string
+      type: object
+      properties:
+        esr_code:
+          type: string
+        yandex_code:
+          type: string
     ListOfCarriers:
-        type: object
-        properties:
-          carriers:
-            type: array
-            items:
-              $ref: '#/components/schemas/Carrier'
-          carrier:
-              $ref: '#/components/schemas/Carrier'
-    Settlement:
-        type: object
-        properties:
-          distance:
-            type: number
-          code:
-            type: string
-          title:
-            type: string
-          popular_title:
-            type: string
-          short_title:
-            type: string
-          lat:
-            type: number
-          lng:
-            type: number
-          type:
-            type: string
-    SingleThread:
-        type: object
-        properties:
-          except_days:
-            type: string
-          arrival_date:
-            type: string
-          from:
-            type: string
-          uid:
-            type: string
-          title:
-            type: string
-          interval:
-            $ref: '#/components/schemas/SingleInterval'
-          departure_date:
-            type: string
-          start_time:
-            type: string
-          number:
-            type: string
-          short_title:
-            type: string
-          days:
-            type: string
-          to:
-            type: string
-          carrier:
+      type: object
+      properties:
+        carriers:
+          type: array
+          items:
             $ref: '#/components/schemas/Carrier'
-          transport_type:
-            type: string
-          stops:
-            type: array
-            items:
-              $ref: '#/components/schemas/Stop'
-          vehicle:
-            type: string
-          start_date:
-            type: string
-          transport_subtype:
-            $ref: '#/components/schemas/TransportSubtype'
-          express_type:
-            type: string
+        carrier:
+          $ref: '#/components/schemas/Carrier'
+    Settlement:
+      type: object
+      properties:
+        distance:
+          type: number
+        code:
+          type: string
+        title:
+          type: string
+        popular_title:
+          type: string
+        short_title:
+          type: string
+        lat:
+          type: number
+        lng:
+          type: number
+        type:
+          type: string
+    SingleThread:
+      type: object
+      properties:
+        except_days:
+          type: string
+        arrival_date:
+          type: string
+        from:
+          type: string
+        uid:
+          type: string
+        title:
+          type: string
+        interval:
+          $ref: '#/components/schemas/SingleInterval'
+        departure_date:
+          type: string
+        start_time:
+          type: string
+        number:
+          type: string
+        short_title:
+          type: string
+        days:
+          type: string
+        to:
+          type: string
+        carrier:
+          $ref: '#/components/schemas/Carrier'
+        transport_type:
+          type: string
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/Stop'
+        vehicle:
+          type: string
+        start_date:
+          type: string
+        transport_subtype:
+          $ref: '#/components/schemas/TransportSubtype'
+        express_type:
+          type: string
     Stop:
-        type: object
-        properties:
-          arrival:
-            type: string
-          departure:
-            type: string
-          duration:
-            type: number
-          stop_time:
-            type: number
-          station:
-            $ref: '#/components/schemas/Station'
-          terminal:
-            type: string
-          platform:
-            type: string
+      type: object
+      properties:
+        arrival:
+          type: string
+        departure:
+          type: string
+        duration:
+          type: number
+        stop_time:
+          type: number
+        station:
+          $ref: '#/components/schemas/Station'
+        terminal:
+          type: string
+        platform:
+          type: string
     SingleInterval:
-        type: object
-        properties:
-          density:
-            type: string
-          end_time:
-            type: string
-          begin_time:
-            type: number
+      type: object
+      properties:
+        density:
+          type: string
+        end_time:
+          type: string
+        begin_time:
+          type: number
     SingleStationRoutes:
-        type: object
-        properties:
-          date:
-              type: string
-              format: date
-              example: "2017-01-01"
-          pagination:
-            $ref: '#/components/schemas/Pagination'
-          station:
-             $ref: '#/components/schemas/Station'
-          schedule:
-             type: array
-             items:
-               $ref: '#/components/schemas/ScheduleItem'
-          interval_schedule:
-             type: array
-             items:
-               $ref: '#/components/schemas/IntervalScheduleItem'
-          schedule_direction:
-             $ref: '#/components/schemas/Direction'
-          directions:
-             type: array
-             items:
-               $ref: '#/components/schemas/Direction'
+      type: object
+      properties:
+        date:
+          type: string
+          format: date
+          example: "2017-01-01"
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        station:
+          $ref: '#/components/schemas/Station'
+        schedule:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScheduleItem'
+        interval_schedule:
+          type: array
+          items:
+            $ref: '#/components/schemas/IntervalScheduleItem'
+        schedule_direction:
+          $ref: '#/components/schemas/Direction'
+        directions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Direction'
     ScheduleItem:
-       type: object
-       properties:
-         except_days:
-           type: string
-         arrival:
-           type: string
-           format: date-time
-         thread:
-           $ref: '#/components/schemas/Thread'
-         is_fuzzy:
-           type: boolean
-         days:
-           type: string
-         stops:
-           type: string
-         departure:
-           type: string
-           format: date-time
-         terminal:
-           type: string
-         platform:
-           type: string
+      type: object
+      properties:
+        except_days:
+          type: string
+        arrival:
+          type: string
+          format: date-time
+        thread:
+          $ref: '#/components/schemas/Thread'
+        is_fuzzy:
+          type: boolean
+        days:
+          type: string
+        stops:
+          type: string
+        departure:
+          type: string
+          format: date-time
+        terminal:
+          type: string
+        platform:
+          type: string
     IntervalScheduleItem:
-       type: object
-       properties:
-         except_days:
-           type: string
-         thread:
-           $ref: '#/components/schemas/Thread'
-         is_fuzzy:
-           type: boolean
-         days:
-           type: string
-         stops:
-           type: string
-         terminal:
-           type: string
-         platform:
-           type: string
+      type: object
+      properties:
+        except_days:
+          type: string
+        thread:
+          $ref: '#/components/schemas/Thread'
+        is_fuzzy:
+          type: boolean
+        days:
+          type: string
+        stops:
+          type: string
+        terminal:
+          type: string
+        platform:
+          type: string
     Direction:
-       type: object
-       properties:
-         code:
-           type: string
-         title:
-           type: string
+      type: object
+      properties:
+        code:
+          type: string
+        title:
+          type: string
     Routes:
       type: object
       properties:

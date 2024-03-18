@@ -34,8 +34,12 @@ struct ContentView: View {
         )
         
         Task {
-            let stations = try await service.search(from: "s9600216", to: "s9600213", date: "2024-03-17")
-            print(stations)
+            do {
+                let stations = try await service.search(from: "c146", to: "c213")
+                print(stations)
+            } catch {
+                print("request failed: \(error)")
+            }
         }
     }
     
@@ -51,8 +55,12 @@ struct ContentView: View {
         )
         
         Task {
-            let stations = try await service.get()
-            print(stations)
+            do {
+                let stations = try await service.getListOfAllStations()
+                print("stations: \(stations)")
+            } catch {
+                print("request failed: \(error)")
+            }
         }
     }
     
@@ -68,8 +76,12 @@ struct ContentView: View {
         )
         
         Task {
-            let stations = try await service.getNearestStations(lat: 59.864177, lng: 30.319163, distance: 50)
-            print(stations)
+            do {
+                let stations = try await service.getNearestStations(lat: 59.864177, lng: 30.319163, distance: 50)
+                print(stations)
+            } catch {
+                print("request failed: \(error)")
+            }
         }
     }
     

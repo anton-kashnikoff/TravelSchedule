@@ -7,11 +7,12 @@
 
 import OpenAPIRuntime
 import OpenAPIURLSession
+import Foundation
 
 typealias StationList = Components.Schemas.ListOfStations
 
 protocol AllStationsInfoProtocol {
-    func get(format: Operations.getStationsList.Input.Query.formatPayload) async throws -> StationList
+    func getListOfAllStations() async throws -> StationList
 }
 
 final class AllStationsService: AllStationsInfoProtocol {
@@ -23,8 +24,10 @@ final class AllStationsService: AllStationsInfoProtocol {
         self.apikey = apikey
     }
     
-    func get(format: Operations.getStationsList.Input.Query.formatPayload = .json) async throws -> StationList {
-        let response = try await client.getStationsList(query: .init(apikey: apikey, format: format))
-        return try response.ok.body.json
+    func getListOfAllStations() async throws -> StationList {
+        let response = try await client.getStationsList(query: .init(apikey: apikey))
+        let httpBody = try response.ok.body.html
+        let data = try await Data(collecting: httpBody, upTo: 100 * 1024 * 1024)
+        return try JSONDecoder().decode(StationList.self, from: data)
     }
 }
