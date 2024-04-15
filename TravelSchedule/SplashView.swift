@@ -13,7 +13,7 @@ struct SplashView: View {
     var body: some View {
         Image("Splash Screen")
             .resizable()
-            .scaledToFill()
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
             .ignoresSafeArea()
             .onAppear {
                 withAnimation(.easeIn(duration: 0.7)) {}
@@ -26,3 +26,6 @@ struct SplashView: View {
     }
 }
 
+#Preview {
+    SplashView(isActive: .constant(true))
+}
