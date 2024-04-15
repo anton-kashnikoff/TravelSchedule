@@ -8,8 +8,39 @@
 import SwiftUI
 
 struct ScheduleView: View {
+    @State private var from = ""
+    @State private var to = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            ZStack {
+                Rectangle()
+                    .fill(.blueUniversal)
+                    .frame(height: 128)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                HStack(spacing: 16) {
+                    VStack(spacing: 28) {
+                        TextField("Откуда", text: $from)
+                            .padding(.leading)
+                        TextField("Куда", text: $to)
+                            .padding(.leading)
+                    }
+                    .frame(height: 96)
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(.leading, 16)
+                    
+                    Image("Сhange")
+                        .resizable()
+                        .frame(width: 36, height: 36)
+                        .padding(.trailing, 16)
+                }
+            }
+            .padding(.horizontal, 10)
+            
+            Spacer()
+        }
     }
 }
 

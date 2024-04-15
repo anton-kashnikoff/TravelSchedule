@@ -15,12 +15,15 @@ struct ContentView: View {
                     Image("Schedule")
                         .renderingMode(.template)
                 }
+                .border(.shadow)
+                .ignoresSafeArea(edges: [.top, .leading, .trailing])
             
             Color.blue.edgesIgnoringSafeArea(.top)
                 .tabItem {
                     Image("Settings")
                         .renderingMode(.template)
                 }
+                .border(.shadow)
             
         }
     }
