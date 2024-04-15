@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct SplashView: View {
+    @Binding var isActive: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("Splash Screen")
+            .resizable()
+            .scaledToFill()
+            .ignoresSafeArea()
+            .onAppear {
+                withAnimation(.easeIn(duration: 0.7)) {}
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    withAnimation {
+                        self.isActive = true
+                    }
+                }
+            }
     }
 }
 
-#Preview {
-    SplashView()
-}
