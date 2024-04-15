@@ -13,6 +13,7 @@
 		CB2477442B90CE6100E41476 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2477432B90CE6100E41476 /* Preview Assets.xcassets */; };
 		CB3E15F72BCD8197004C9E8F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15F62BCD8197004C9E8F /* SplashView.swift */; };
 		CB3E15F92BCD857E004C9E8F /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */; };
+		CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */; };
 		CB4FDC442B9CA829005E1EF9 /* SearchRoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */; };
 		CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */; };
 		CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */; };
@@ -35,6 +36,7 @@
 		CB2477432B90CE6100E41476 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB3E15F62BCD8197004C9E8F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
+		CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoutesService.swift; sourceTree = "<group>"; };
 		CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */,
 				CB24773E2B90CE6000E41476 /* ContentView.swift */,
+				CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */,
 				CB3E15F62BCD8197004C9E8F /* SplashView.swift */,
 				CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */,
 				CB4FDC542B9CAEC9005E1EF9 /* Services */,
@@ -208,6 +211,7 @@
 				CBE2D67B2B96472200924855 /* NearestStationsService.swift in Sources */,
 				CB24773D2B90CE6000E41476 /* TravelScheduleApp.swift in Sources */,
 				CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */,
+				CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */,
 				CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
