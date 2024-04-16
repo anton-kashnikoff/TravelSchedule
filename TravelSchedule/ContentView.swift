@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var path = [String]()
+    
     var body: some View {
-        TabView {
-            ScheduleView()
-                .tabItem {
-                    Image("Schedule")
-                        .renderingMode(.template)
-                }
-                .border(.shadow)
-                .ignoresSafeArea(edges: [.top, .leading, .trailing])
-            
-            Color.blue.edgesIgnoringSafeArea(.top)
-                .tabItem {
-                    Image("Settings")
-                        .renderingMode(.template)
-                }
-                .border(.shadow)
-            
+        NavigationStack(path: $path) {
+            TabView {
+                ScheduleView(path: $path)
+                    .tabItem {
+                        Image("Schedule")
+                            .renderingMode(.template)
+                    }
+                
+                Color.blue.edgesIgnoringSafeArea(.top)
+                    .tabItem {
+                        Image("Settings")
+                            .renderingMode(.template)
+                    }
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct SearchView: View {
     @StateObject var viewModel = ScheduleViewModel()
     
-    @State private var searchString = "sd"
+    @State private var searchString = ""
     
     private var searchResults: [String] {
         searchString.isEmpty ? viewModel.cities : viewModel.cities.filter {
