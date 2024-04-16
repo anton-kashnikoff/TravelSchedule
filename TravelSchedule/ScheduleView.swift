@@ -12,6 +12,8 @@ struct ScheduleView: View {
     @State private var to = ""
     @State private var path = [String]()
     
+    @ObservedObject var viewModel: ScheduleViewModel
+    
     var body: some View {
         NavigationStack(path: $path) {
             VStack {
@@ -23,15 +25,15 @@ struct ScheduleView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     HStack(spacing: 16) {
                         VStack(spacing: 28) {
-                            TextField("Откуда", text: $from)
+                            TextField("Откуда", text: $from, prompt: Text("Откуда"))
                                 .padding(.leading)
                                 .onTapGesture {
-                                    path.append("SearchView")
+                                    path.append("SearchCityView")
                                 }
-                            TextField("Куда", text: $to)
+                            TextField("Куда", text: $to, prompt: Text("Куда"))
                                 .padding(.leading)
                                 .onTapGesture {
-                                    path.append("SearchView")
+                                    path.append("SearchCityView")
                                 }
                         }
                         .frame(height: 96)
@@ -54,8 +56,10 @@ struct ScheduleView: View {
                 
             }
             .navigationDestination(for: String.self) { id in
-                if id == "SearchView" {
-                    SearchView()
+                if id == "SearchCityView" {
+                    SearchCityView(viewModel: viewModel, path: $path)
+                } else if id == "SearchStationView" {
+                    SearchStationView(viewModel: viewModel, path: $path)
                 }
             }
         }
@@ -63,5 +67,5 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView()
+    ScheduleView(viewModel: ScheduleViewModel())
 }

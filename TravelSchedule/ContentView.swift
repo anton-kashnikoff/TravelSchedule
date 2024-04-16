@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ScheduleViewModel()
+    
     var body: some View {
         NavigationStack {
             TabView {
-                ScheduleView()
+                ScheduleView(viewModel: viewModel)
                     .tabItem {
                         Image("Schedule")
                             .renderingMode(.template)
