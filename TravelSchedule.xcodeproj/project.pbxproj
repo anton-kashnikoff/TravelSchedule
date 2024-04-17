@@ -23,6 +23,8 @@
 		CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC522B9CAD37005E1EF9 /* CopyrightService.swift */; };
 		CBB6A32C2BD038A6005505C9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6A32B2BD038A6005505C9 /* SettingsView.swift */; };
 		CBB6A32F2BD04C88005505C9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6A32E2BD04C88005505C9 /* ThemeManager.swift */; };
+		CBB6A3372BD05214005505C9 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6A3362BD05214005505C9 /* ErrorView.swift */; };
+		CBB6A3392BD0529C005505C9 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6A3382BD0529C005505C9 /* ErrorType.swift */; };
 		CBBFFBC32BCECCB600C2482B /* SearchCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */; };
 		CBBFFBC62BCECD9400C2482B /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBC52BCECD9400C2482B /* ScheduleViewModel.swift */; };
 		CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBC82BCED43200C2482B /* SearchBar.swift */; };
@@ -53,6 +55,8 @@
 		CB4FDC522B9CAD37005E1EF9 /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		CBB6A32B2BD038A6005505C9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CBB6A32E2BD04C88005505C9 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CBB6A3362BD05214005505C9 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		CBB6A3382BD0529C005505C9 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityView.swift; sourceTree = "<group>"; };
 		CBBFFBC52BCECD9400C2482B /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		CBBFFBC82BCED43200C2482B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				CBB6A32B2BD038A6005505C9 /* SettingsView.swift */,
 				CBBFFBC82BCED43200C2482B /* SearchBar.swift */,
 				CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */,
+				CBB6A3362BD05214005505C9 /* ErrorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				CBBFFBCE2BCEF40200C2482B /* City.swift */,
+				CBB6A3382BD0529C005505C9 /* ErrorType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 				CB3E15F72BCD8197004C9E8F /* SplashView.swift in Sources */,
 				CB4FDC4B2B9CAB08005E1EF9 /* NearestSettlementService.swift in Sources */,
 				CB24773F2B90CE6000E41476 /* ContentView.swift in Sources */,
+				CBB6A3372BD05214005505C9 /* ErrorView.swift in Sources */,
 				CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */,
+				CBB6A3392BD0529C005505C9 /* ErrorType.swift in Sources */,
 				CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */,
 				CB4FDC512B9CACEB005E1EF9 /* StationsListService.swift in Sources */,
 				CBB6A32F2BD04C88005505C9 /* ThemeManager.swift in Sources */,
