@@ -21,6 +21,8 @@
 		CB4FDC4E2B9CAC9E005E1EF9 /* CarrierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC4D2B9CAC9E005E1EF9 /* CarrierService.swift */; };
 		CB4FDC512B9CACEB005E1EF9 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC502B9CACEB005E1EF9 /* StationsListService.swift */; };
 		CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC522B9CAD37005E1EF9 /* CopyrightService.swift */; };
+		CBB6A32C2BD038A6005505C9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6A32B2BD038A6005505C9 /* SettingsView.swift */; };
+		CBB6A32F2BD04C88005505C9 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6A32E2BD04C88005505C9 /* ThemeManager.swift */; };
 		CBBFFBC32BCECCB600C2482B /* SearchCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */; };
 		CBBFFBC62BCECD9400C2482B /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBC52BCECD9400C2482B /* ScheduleViewModel.swift */; };
 		CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBC82BCED43200C2482B /* SearchBar.swift */; };
@@ -49,6 +51,8 @@
 		CB4FDC4D2B9CAC9E005E1EF9 /* CarrierService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierService.swift; sourceTree = "<group>"; };
 		CB4FDC502B9CACEB005E1EF9 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
 		CB4FDC522B9CAD37005E1EF9 /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
+		CBB6A32B2BD038A6005505C9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CBB6A32E2BD04C88005505C9 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityView.swift; sourceTree = "<group>"; };
 		CBBFFBC52BCECD9400C2482B /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		CBBFFBC82BCED43200C2482B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -93,9 +97,11 @@
 			children = (
 				CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */,
 				CB24773E2B90CE6000E41476 /* ContentView.swift */,
+				CBB6A32E2BD04C88005505C9 /* ThemeManager.swift */,
 				CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */,
 				CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */,
 				CBBFFBD02BCEF6F600C2482B /* SearchStationView.swift */,
+				CBB6A32B2BD038A6005505C9 /* SettingsView.swift */,
 				CBBFFBC82BCED43200C2482B /* SearchBar.swift */,
 				CBBFFBC52BCECD9400C2482B /* ScheduleViewModel.swift */,
 				CBBFFBCE2BCEF40200C2482B /* City.swift */,
@@ -222,6 +228,7 @@
 				CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */,
 				CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */,
 				CB4FDC512B9CACEB005E1EF9 /* StationsListService.swift in Sources */,
+				CBB6A32F2BD04C88005505C9 /* ThemeManager.swift in Sources */,
 				CB4FDC442B9CA829005E1EF9 /* SearchRoutesService.swift in Sources */,
 				CB3E15F92BCD857E004C9E8F /* ViewCoordinator.swift in Sources */,
 				CBBFFBCF2BCEF40200C2482B /* City.swift in Sources */,
@@ -233,6 +240,7 @@
 				CBBFFBC62BCECD9400C2482B /* ScheduleViewModel.swift in Sources */,
 				CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */,
 				CBBFFBD12BCEF6F600C2482B /* SearchStationView.swift in Sources */,
+				CBB6A32C2BD038A6005505C9 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,16 +25,25 @@ struct ScheduleView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     HStack(spacing: 16) {
                         VStack(spacing: 28) {
-                            TextField("Откуда", text: $from, prompt: Text("Откуда"))
-                                .padding(.leading)
-                                .onTapGesture {
-                                    path.append("SearchCityView")
-                                }
-                            TextField("Куда", text: $to, prompt: Text("Куда"))
-                                .padding(.leading)
-                                .onTapGesture {
-                                    path.append("SearchCityView")
-                                }
+                            TextField(
+                                "Откуда",
+                                text: $from,
+                                prompt: Text("Откуда").foregroundStyle(.grayUniversal)
+                            )
+                            .padding(.leading)
+                            .onTapGesture {
+                                path.append("SearchCityView")
+                            }
+                            
+                            TextField(
+                                "Куда",
+                                text: $to,
+                                prompt: Text("Куда").foregroundStyle(.grayUniversal)
+                            )
+                            .padding(.leading)
+                            .onTapGesture {
+                                path.append("SearchCityView")
+                            }
                         }
                         .frame(height: 96)
                         .background(.white)
