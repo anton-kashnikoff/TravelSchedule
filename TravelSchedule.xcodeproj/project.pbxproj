@@ -95,18 +95,11 @@
 		CB24773B2B90CE6000E41476 /* TravelSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				CBB6A3352BD0509F005505C9 /* Helpers */,
 				CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */,
-				CB24773E2B90CE6000E41476 /* ContentView.swift */,
-				CBB6A32E2BD04C88005505C9 /* ThemeManager.swift */,
-				CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */,
-				CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */,
-				CBBFFBD02BCEF6F600C2482B /* SearchStationView.swift */,
-				CBB6A32B2BD038A6005505C9 /* SettingsView.swift */,
-				CBBFFBC82BCED43200C2482B /* SearchBar.swift */,
-				CBBFFBC52BCECD9400C2482B /* ScheduleViewModel.swift */,
-				CBBFFBCE2BCEF40200C2482B /* City.swift */,
-				CB3E15F62BCD8197004C9E8F /* SplashView.swift */,
-				CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */,
+				CBB6A3342BD05078005505C9 /* Model */,
+				CBB6A3332BD05060005505C9 /* View */,
+				CBB6A3312BD0504B005505C9 /* ViewModel */,
 				CB4FDC542B9CAEC9005E1EF9 /* Services */,
 				CB2477402B90CE6100E41476 /* Assets.xcassets */,
 				CBE2D6752B96464200924855 /* openapi.yaml */,
@@ -137,6 +130,45 @@
 				CB4FDC522B9CAD37005E1EF9 /* CopyrightService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CBB6A3312BD0504B005505C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CBBFFBC52BCECD9400C2482B /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CBB6A3332BD05060005505C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB3E15F62BCD8197004C9E8F /* SplashView.swift */,
+				CB24773E2B90CE6000E41476 /* ContentView.swift */,
+				CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */,
+				CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */,
+				CBBFFBD02BCEF6F600C2482B /* SearchStationView.swift */,
+				CBB6A32B2BD038A6005505C9 /* SettingsView.swift */,
+				CBBFFBC82BCED43200C2482B /* SearchBar.swift */,
+				CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CBB6A3342BD05078005505C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBBFFBCE2BCEF40200C2482B /* City.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CBB6A3352BD0509F005505C9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CBB6A32E2BD04C88005505C9 /* ThemeManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
