@@ -51,6 +51,7 @@ struct SettingsView: View {
                 .frame(height: 0.5)
                 .foregroundStyle(.black.opacity(0.3))
         }
+        .background(.whiteYP)
     }
 }
 

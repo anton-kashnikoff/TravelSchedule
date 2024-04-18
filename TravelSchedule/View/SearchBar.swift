@@ -20,6 +20,7 @@ struct SearchBar: View {
                 HStack {
                     TextField(placeholder, text: $searchText)
                         .font(.system(size: 17))
+                        .foregroundStyle(.blackYP)
                         .padding(.leading, 8)
                         .autocorrectionDisabled(true)
                         .textInputAutocapitalization(.never)
@@ -57,7 +58,7 @@ struct SearchBar: View {
                 }
             }
             .frame(height: 37)
-            .background(.lightGrayUniversal)
+            .background(.searchBarBackground)
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .frame(height: 37)
@@ -66,5 +67,5 @@ struct SearchBar: View {
 }
 
 #Preview {
-    SearchBar(searchText: .constant("Москва"))
+    SearchBar(searchText: .constant(""))
 }

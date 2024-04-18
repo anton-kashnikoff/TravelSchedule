@@ -49,6 +49,7 @@ struct SearchStationView: View {
                             Image("Chevron")
                                 .padding(.trailing, 18)
                         }
+                        .padding(.leading)
                         .frame(height: 60)
                         .listRowSeparator(.hidden)
                         .onTapGesture {
@@ -62,11 +63,13 @@ struct SearchStationView: View {
                             }
                         }
                     }
-                    .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
+                    .background(.whiteYP)
+                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
                 .listStyle(.plain)
             }
         }
+        .background(.whiteYP)
         .navigationTitle("Выбор станции")
         .toolbarRole(.editor)
         .toolbar(.hidden, for: .tabBar)
