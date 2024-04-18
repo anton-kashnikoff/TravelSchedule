@@ -37,45 +37,56 @@ struct ScheduleView: View {
         NavigationStack(path: $path) {
             VStack {
                 Spacer()
-                ZStack {
-                    Rectangle()
-                        .fill(.blueUniversal)
-                        .frame(height: 128)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                    HStack(spacing: 16) {
-                        VStack(spacing: 28) {
-                            TextField(
-                                "Откуда",
-                                text: from,
-                                prompt: Text("Откуда").foregroundStyle(.grayUniversal)
-                            )
-                            .padding(.leading)
-                            .onTapGesture {
-                                path.append("SearchCityViewFrom")
+                VStack(spacing: 16) {
+                    ZStack {
+                        Rectangle()
+                            .fill(.blueUniversal)
+                            .frame(height: 128)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                        HStack(spacing: 16) {
+                            VStack(spacing: 28) {
+                                TextField(
+                                    "Откуда",
+                                    text: from,
+                                    prompt: Text("Откуда").foregroundStyle(.grayUniversal)
+                                )
+                                .padding(.leading)
+                                .onTapGesture {
+                                    path.append("SearchCityViewFrom")
+                                }
+                                
+                                TextField(
+                                    "Куда",
+                                    text: to,
+                                    prompt: Text("Куда").foregroundStyle(.grayUniversal)
+                                )
+                                .padding(.leading)
+                                .onTapGesture {
+                                    path.append("SearchCityViewTo")
+                                }
                             }
+                            .frame(height: 96)
+                            .background(.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding(.leading, 16)
                             
-                            TextField(
-                                "Куда",
-                                text: to,
-                                prompt: Text("Куда").foregroundStyle(.grayUniversal)
-                            )
-                            .padding(.leading)
-                            .onTapGesture {
-                                path.append("SearchCityViewTo")
-                            }
+                            Image("Сhange")
+                                .resizable()
+                                .frame(width: 36, height: 36)
+                                .padding(.trailing, 16)
                         }
-                        .frame(height: 96)
-                        .background(.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding(.leading, 16)
-                        
-                        Image("Сhange")
-                            .resizable()
-                            .frame(width: 36, height: 36)
-                            .padding(.trailing, 16)
                     }
+                    .padding(.horizontal, 10)
+                    
+                    Button("Найти") {
+                        
+                    }
+                    .frame(width: 150, height: 60)
+                    .background(.blueUniversal)
+                    .foregroundStyle(.whiteUniversal)
+                    .font(.system(size: 17, weight: .bold))
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
                 }
-                .padding(.horizontal, 10)
                 
                 Spacer()
                 Rectangle()
