@@ -14,6 +14,8 @@ struct SearchCityView: View {
     
     @Binding var path: [String]
     
+    var type: DirectionType
+    
     private var searchResults: [City] {
         searchString.isEmpty ? viewModel.cities : viewModel.cities.filter {
             $0.name.contains(searchString)
@@ -40,8 +42,14 @@ struct SearchCityView: View {
                         .frame(height: 60)
                         .listRowSeparator(.hidden)
                         .onTapGesture {
-                            viewModel.selectedCity = city
-                            path.append("SearchStationView")
+                            switch type {
+                            case .from:
+                                viewModel.selectedCityFrom = city
+                                path.append("SearchStationViewFrom")
+                            case .to:
+                                viewModel.selectedCityTo = city
+                                path.append("SearchStationViewTo")
+                            }
                         }
                     }
                     .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
@@ -57,6 +65,6 @@ struct SearchCityView: View {
 
 #Preview {
     SearchCityView(
-        viewModel: ScheduleViewModel(), path: .constant([])
+        viewModel: ScheduleViewModel(), path: .constant([]), type: .from
     )
 }

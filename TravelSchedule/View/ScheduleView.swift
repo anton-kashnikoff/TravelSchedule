@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct ScheduleView: View {
-    @State private var from = ""
-    @State private var to = ""
     @State private var path = [String]()
     
     @ObservedObject var viewModel: ScheduleViewModel
     
     var body: some View {
+        // Я не знаю, как сделать проще, чем 2 Binding
+        let from = Binding<String>(get: {
+            guard
+                let city = viewModel.selectedCityFrom,
+                let station = viewModel.selectedStationFrom
+            else { return "" }
+            return "\(city.name) (\(station))"
+        }) { newValue in
+            viewModel.selectedStationFrom = newValue
+        }
+        
+        let to = Binding<String>(get: {
+            guard
+                let city = viewModel.selectedCityTo,
+                let station = viewModel.selectedStationTo
+            else { return "" }
+            return "\(city.name) (\(station))"
+        }) { newValue in
+            viewModel.selectedStationTo = newValue
+        }
+        
         NavigationStack(path: $path) {
             VStack {
                 Spacer()
@@ -27,22 +46,22 @@ struct ScheduleView: View {
                         VStack(spacing: 28) {
                             TextField(
                                 "Откуда",
-                                text: $from,
+                                text: from,
                                 prompt: Text("Откуда").foregroundStyle(.grayUniversal)
                             )
                             .padding(.leading)
                             .onTapGesture {
-                                path.append("SearchCityView")
+                                path.append("SearchCityViewFrom")
                             }
                             
                             TextField(
                                 "Куда",
-                                text: $to,
+                                text: to,
                                 prompt: Text("Куда").foregroundStyle(.grayUniversal)
                             )
                             .padding(.leading)
                             .onTapGesture {
-                                path.append("SearchCityView")
+                                path.append("SearchCityViewTo")
                             }
                         }
                         .frame(height: 96)
@@ -65,10 +84,14 @@ struct ScheduleView: View {
                 
             }
             .navigationDestination(for: String.self) { id in
-                if id == "SearchCityView" {
-                    SearchCityView(viewModel: viewModel, path: $path)
-                } else if id == "SearchStationView" {
-                    SearchStationView(viewModel: viewModel, path: $path)
+                if id == "SearchCityViewFrom" {
+                    SearchCityView(viewModel: viewModel, path: $path, type: .from)
+                } else if id == "SearchCityViewTo" {
+                    SearchCityView(viewModel: viewModel, path: $path, type: .to)
+                } else if id == "SearchStationViewFrom" {
+                    SearchStationView(viewModel: viewModel, path: $path, type: .from)
+                } else if id == "SearchStationViewTo" {
+                    SearchStationView(viewModel: viewModel, path: $path, type: .to)
                 }
             }
         }

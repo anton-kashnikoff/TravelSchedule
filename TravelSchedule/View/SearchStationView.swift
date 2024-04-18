@@ -14,8 +14,17 @@ struct SearchStationView: View {
     
     @Binding var path: [String]
     
+    var type: DirectionType
+    
     private var searchResults: [String] {
-        if let stations = viewModel.selectedCity?.stations {
+        let city = switch type {
+        case .from:
+            viewModel.selectedCityFrom
+        case .to:
+            viewModel.selectedCityTo
+        }
+        
+        if let stations = city?.stations {
             return searchString.isEmpty ? stations : stations.filter {
                 $0.contains(searchString)
             }
@@ -43,8 +52,14 @@ struct SearchStationView: View {
                         .frame(height: 60)
                         .listRowSeparator(.hidden)
                         .onTapGesture {
-                            viewModel.selectedStation = station
-                            path.removeAll()
+                            switch type {
+                            case .from:
+                                viewModel.selectedStationFrom = station
+                                path.removeAll()
+                            case .to:
+                                viewModel.selectedStationTo = station
+                                path.removeAll()
+                            }
                         }
                     }
                     .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 0))
@@ -59,5 +74,5 @@ struct SearchStationView: View {
 }
 
 #Preview {
-    SearchStationView(viewModel: ScheduleViewModel(), path: .constant([]))
+    SearchStationView(viewModel: ScheduleViewModel(), path: .constant([]), type: .from)
 }

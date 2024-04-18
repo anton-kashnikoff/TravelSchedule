@@ -9,8 +9,11 @@ import Foundation
 
 final class ScheduleViewModel: ObservableObject {
     @Published var cities: [City]
-    @Published var selectedCity: City?
-    @Published var selectedStation: String?
+    
+    @Published var selectedCityFrom: City?
+    @Published var selectedStationFrom: String?
+    @Published var selectedCityTo: City?
+    @Published var selectedStationTo: String?
     
     init() {
         cities = [
