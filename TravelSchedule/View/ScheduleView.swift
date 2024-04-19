@@ -94,6 +94,10 @@ struct ScheduleView: View {
                     .foregroundStyle(.whiteUniversal)
                     .font(.system(size: 17, weight: .bold))
                     .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .opacity(
+                        (viewModel.selectedStationFrom == nil ||
+                         viewModel.selectedStationTo == nil) ? 0 : 1
+                    )
                 }
                 
                 Spacer()
