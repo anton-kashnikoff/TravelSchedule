@@ -72,10 +72,16 @@ struct ScheduleView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                             .padding(.leading, 16)
                             
-                            Image("Сhange")
-                                .resizable()
-                                .frame(width: 36, height: 36)
-                                .padding(.trailing, 16)
+                            Button {
+                                let temp = viewModel.selectedStationFrom
+                                viewModel.selectedStationFrom = viewModel.selectedStationTo
+                                viewModel.selectedStationTo = temp
+                            } label: {
+                                Image("Сhange")
+                                    .resizable()
+                                    .frame(width: 36, height: 36)
+                                    .padding(.trailing, 16)
+                            }
                         }
                     }
                     .padding(.horizontal, 10)
