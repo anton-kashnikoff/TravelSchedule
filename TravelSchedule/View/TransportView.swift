@@ -94,8 +94,8 @@ struct TransportView: View {
                 }
                 .frame(width: 343, height: 60)
                 .background(.blueUniversal)
-                
                 .clipShape(RoundedRectangle(cornerRadius: 16))
+                .padding(.bottom, 24)
             }
         }
     }
