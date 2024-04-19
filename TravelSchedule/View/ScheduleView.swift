@@ -87,7 +87,7 @@ struct ScheduleView: View {
                     .padding(.horizontal, 10)
                     
                     Button("Найти") {
-                        
+                        path.append("TransportView")
                     }
                     .frame(width: 150, height: 60)
                     .background(.blueUniversal)
@@ -115,6 +115,8 @@ struct ScheduleView: View {
                     SearchStationView(viewModel: viewModel, path: $path, type: .from)
                 } else if id == "SearchStationViewTo" {
                     SearchStationView(viewModel: viewModel, path: $path, type: .to)
+                } else if id == "TransportView" {
+                    TransportView(viewModel: viewModel)
                 }
             }
         }
