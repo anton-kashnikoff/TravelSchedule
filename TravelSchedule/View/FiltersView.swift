@@ -10,7 +10,7 @@ import SwiftUI
 struct FiltersView: View {
     @ObservedObject var viewModel: ScheduleViewModel
     
-    @State private var isYes = true
+    @State private var isYes = false
     @State private var isNo = false
     
     @State private var isMorning = false
@@ -87,8 +87,7 @@ struct FiltersView: View {
                     .font(.system(size: 17))
                     .foregroundStyle(.blackYP)
                 Spacer()
-                Toggle(isOn: $isYes) {
-                }
+                Toggle(isOn: $isYes) {}
                 .toggleStyle(RadioButtonCustomToggleStyle())
                 .onChange(of: isYes) { oldValue, _ in
                     isNo = oldValue
@@ -102,8 +101,7 @@ struct FiltersView: View {
                     .font(.system(size: 17))
                     .foregroundStyle(.blackYP)
                 Spacer()
-                Toggle(isOn: $isNo) {
-                }
+                Toggle(isOn: $isNo) {}
                 .toggleStyle(RadioButtonCustomToggleStyle())
                 .onChange(of: isNo) { oldValue, _ in
                     isYes = oldValue
@@ -113,6 +111,19 @@ struct FiltersView: View {
             .padding([.leading, .trailing])
             
             Spacer()
+            
+            if isYes || isNo {
+                Button {
+                    
+                } label: {
+                    Text("Применить")
+                        .font(.system(size: 17, weight: .bold))
+                        .foregroundStyle(.whiteUniversal)
+                }
+                .frame(width: 343, height: 60)
+                .background(.blueUniversal)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+            }
         }
         .toolbarRole(.editor)
     }
