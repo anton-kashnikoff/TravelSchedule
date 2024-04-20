@@ -33,6 +33,10 @@ final class ScheduleViewModel: ObservableObject {
         ["Да", "Нет"]
     }
     
+    var operatorInfo: [String] {
+        ["E-mail", "Телефон"]
+    }
+    
     init() {
         cities = [
             City(
@@ -65,21 +69,36 @@ final class ScheduleViewModel: ObservableObject {
     func getListOfRoutes() -> [Route] {
         [
             Route(
-                transportOperator: "РЖД",
+                transportOperator: TransportOperator(
+                    image: "Logo RZHD",
+                    name: "РЖД",
+                    email: "i.lozgkina@yandex.ru",
+                    phoneNumber: "+7 (904) 329-27-71"
+                ),
                 icon: "RZHD",
                 departureDate: DateCreator.createDateFor(day: 14, month: 1, hour: 22, minute: 30),
                 arrivalDate: DateCreator.createDateFor(day: 16, month: 1, hour: 8, minute: 15),
                 info: "С пересадкой в Костроме"
             ),
             Route(
-                transportOperator: "ФГК",
+                transportOperator: TransportOperator(
+                    image: "Logo RZHD",
+                    name: "ФГК",
+                    email: "i.lozgkina@yandex.ru",
+                    phoneNumber: "+7 (904) 329-27-71"
+                ),
                 icon: "FGK",
                 departureDate: DateCreator.createDateFor(day: 15, month: 1, hour: 1, minute: 15),
                 arrivalDate: DateCreator.createDateFor(day: 15, month: 1, hour: 9, minute: 0),
                 info: nil
             ),
             Route(
-                transportOperator: "Урал логистика",
+                transportOperator: TransportOperator(
+                    image: "Logo RZHD",
+                    name: "Урал логистика",
+                    email: "i.lozgkina@yandex.ru",
+                    phoneNumber: "+7 (904) 329-27-71"
+                ),
                 icon: "Ural",
                 departureDate: DateCreator.createDateFor(day: 16, month: 1, hour: 12, minute: 30),
                 arrivalDate: DateCreator.createDateFor(day: 16, month: 1, hour: 21, minute: 0),

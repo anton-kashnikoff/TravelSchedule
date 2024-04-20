@@ -118,7 +118,14 @@ struct ScheduleView: View {
                 } else if id == "TransportView" {
                     TransportView(viewModel: viewModel, path: $path)
                 } else if id == "FiltersView" {
-                    FiltersView(viewModel: viewModel)
+                    FiltersView(viewModel: viewModel, path: $path)
+                } else if id == "TransportOperatorInfoViewRZHD" {
+                    TransportOperatorInfoView(viewModel: viewModel, transportOperator: TransportOperator(
+                        image: "Logo RZHD",
+                        name: "РЖД",
+                        email: "i.lozgkina@yandex.ru",
+                        phoneNumber: "+7 (904) 329-27-71"
+                    ))
                 }
             }
         }

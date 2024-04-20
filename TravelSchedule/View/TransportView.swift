@@ -30,7 +30,7 @@ struct TransportView: View {
                                 Image(route.icon)
                                 VStack(spacing: 2) {
                                     HStack {
-                                        Text(route.transportOperator)
+                                        Text(route.transportOperator.name)
                                             .font(.system(size: 17))
                                             .foregroundStyle(.blackUniversal)
                                         Spacer()
@@ -73,6 +73,9 @@ struct TransportView: View {
                         }
                         .frame(height: 104)
                         .listRowSeparator(.hidden)
+                        .onTapGesture {
+                            path.append("TransportOperatorInfoViewRZHD")
+                        }
                     }
                     .background(.lightGrayUniversal)
                     .clipShape(RoundedRectangle(cornerRadius: 24))
@@ -82,9 +85,6 @@ struct TransportView: View {
                 .background(.whiteYP)
                 .scrollContentBackground(.hidden)
             }
-            .background(.whiteYP)
-            .toolbarRole(.editor)
-            
             VStack {
                 Spacer()
                 Button {
@@ -100,6 +100,8 @@ struct TransportView: View {
                 .padding(.bottom, 24)
             }
         }
+        .background(.whiteYP)
+        .toolbarRole(.editor)
     }
 }
 

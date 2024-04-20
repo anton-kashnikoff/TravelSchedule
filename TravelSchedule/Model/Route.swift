@@ -9,7 +9,7 @@ import Foundation
 
 struct Route: Identifiable {
     let id = UUID()
-    let transportOperator: String
+    let transportOperator: TransportOperator
     let icon: String
     let departureDate: Date
     let arrivalDate: Date

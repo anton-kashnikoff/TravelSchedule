@@ -10,7 +10,15 @@ import SwiftUI
 struct FiltersView: View {
     @ObservedObject var viewModel: ScheduleViewModel
     
-    @State var isOn = false
+    @State private var isYes = true
+    @State private var isNo = false
+    
+    @State private var isMorning = false
+    @State private var isDay = false
+    @State private var isEvening = false
+    @State private var isNight = false
+    
+    @Binding var path: [String]
     
     var body: some View {
         VStack {
@@ -22,26 +30,49 @@ struct FiltersView: View {
             }
             .padding()
             
-            List {
-                ForEach(viewModel.departureTime, id: \.self) { time in
-                    HStack {
-                        Text(time)
-                            .font(.system(size: 17))
-                            .foregroundStyle(.blackYP)
-                        Spacer()
-                        Toggle(isOn: $isOn) {
-                        }
-                        .toggleStyle(CustomCheckboxToggleStyle())
-                    }
-                }
-                .frame(height: 60)
-                .listRowSeparator(.hidden)
-                .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+            HStack {
+                Text(viewModel.departureTime[0])
+                    .font(.system(size: 17))
+                    .foregroundStyle(.blackYP)
+                Spacer()
+                Toggle(isOn: $isMorning) {}
+                .toggleStyle(CustomCheckboxToggleStyle())
             }
-            .frame(maxHeight: 240)
-            .listStyle(.plain)
-            .background(.whiteYP)
-            .scrollDisabled(true)
+            .frame(height: 60)
+            .padding([.leading, .trailing])
+            
+            HStack {
+                Text(viewModel.departureTime[1])
+                    .font(.system(size: 17))
+                    .foregroundStyle(.blackYP)
+                Spacer()
+                Toggle(isOn: $isDay) {}
+                .toggleStyle(CustomCheckboxToggleStyle())
+            }
+            .frame(height: 60)
+            .padding([.leading, .trailing])
+            
+            HStack {
+                Text(viewModel.departureTime[2])
+                    .font(.system(size: 17))
+                    .foregroundStyle(.blackYP)
+                Spacer()
+                Toggle(isOn: $isEvening) {}
+                .toggleStyle(CustomCheckboxToggleStyle())
+            }
+            .frame(height: 60)
+            .padding([.leading, .trailing])
+            
+            HStack {
+                Text(viewModel.departureTime[3])
+                    .font(.system(size: 17))
+                    .foregroundStyle(.blackYP)
+                Spacer()
+                Toggle(isOn: $isNight) {}
+                .toggleStyle(CustomCheckboxToggleStyle())
+            }
+            .frame(height: 60)
+            .padding([.leading, .trailing])
             
             HStack {
                 Text("Показывать варианты с пересадками")
@@ -51,26 +82,35 @@ struct FiltersView: View {
             }
             .padding()
             
-            List {
-                ForEach(viewModel.transfers, id: \.self) { transfer in
-                    HStack {
-                        Text(transfer)
-                            .font(.system(size: 17))
-                            .foregroundStyle(.blackYP)
-                        Spacer()
-                        Toggle(isOn: $isOn) {
-                        }
-                        .toggleStyle(RadioButtonCustomToggleStyle())
-                    }
+            HStack {
+                Text("Да")
+                    .font(.system(size: 17))
+                    .foregroundStyle(.blackYP)
+                Spacer()
+                Toggle(isOn: $isYes) {
                 }
-                .frame(height: 60)
-                .listRowSeparator(.hidden)
-                .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                .toggleStyle(RadioButtonCustomToggleStyle())
+                .onChange(of: isYes) { oldValue, _ in
+                    isNo = oldValue
+                }
             }
-            .frame(maxHeight: 120)
-            .listStyle(.plain)
-            .background(.whiteYP)
-            .scrollDisabled(true)
+            .frame(height: 60)
+            .padding([.leading, .trailing])
+            
+            HStack {
+                Text("Нет")
+                    .font(.system(size: 17))
+                    .foregroundStyle(.blackYP)
+                Spacer()
+                Toggle(isOn: $isNo) {
+                }
+                .toggleStyle(RadioButtonCustomToggleStyle())
+                .onChange(of: isNo) { oldValue, _ in
+                    isYes = oldValue
+                }
+            }
+            .frame(height: 60)
+            .padding([.leading, .trailing])
             
             Spacer()
         }
@@ -79,5 +119,5 @@ struct FiltersView: View {
 }
 
 #Preview {
-    FiltersView(viewModel: ScheduleViewModel())
+    FiltersView(viewModel: ScheduleViewModel(), path: .constant([]))
 }

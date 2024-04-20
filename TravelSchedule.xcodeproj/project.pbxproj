@@ -14,6 +14,7 @@
 		CB3E15F72BCD8197004C9E8F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15F62BCD8197004C9E8F /* SplashView.swift */; };
 		CB3E15F92BCD857E004C9E8F /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */; };
 		CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */; };
+		CB4D71662BD422A600D5DCF9 /* TransportOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */; };
 		CB4FDC442B9CA829005E1EF9 /* SearchRoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */; };
 		CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */; };
 		CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */; };
@@ -25,6 +26,7 @@
 		CB7D7BC62BD3DA1F00832B55 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D7BC52BD3DA1F00832B55 /* FiltersView.swift */; };
 		CB7D7BC92BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D7BC82BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift */; };
 		CB7D7BCC2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D7BCB2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift */; };
+		CB7D7BCF2BD3E83300832B55 /* TransportOperatorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D7BCE2BD3E83200832B55 /* TransportOperatorInfoView.swift */; };
 		CBB0690A2BD2E41300B1EC90 /* TransportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB069092BD2E41300B1EC90 /* TransportView.swift */; };
 		CBB0690D2BD2E53E00B1EC90 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0690C2BD2E53E00B1EC90 /* Route.swift */; };
 		CBB0690F2BD2E7C700B1EC90 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0690E2BD2E7C700B1EC90 /* DateCreator.swift */; };
@@ -53,6 +55,7 @@
 		CB3E15F62BCD8197004C9E8F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOperator.swift; sourceTree = "<group>"; };
 		CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoutesService.swift; sourceTree = "<group>"; };
 		CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		CB7D7BC52BD3DA1F00832B55 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		CB7D7BC82BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		CB7D7BCB2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonCustomToggleStyle.swift; sourceTree = "<group>"; };
+		CB7D7BCE2BD3E83200832B55 /* TransportOperatorInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOperatorInfoView.swift; sourceTree = "<group>"; };
 		CBB069092BD2E41300B1EC90 /* TransportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportView.swift; sourceTree = "<group>"; };
 		CBB0690C2BD2E53E00B1EC90 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		CBB0690E2BD2E7C700B1EC90 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */,
 				CBB069092BD2E41300B1EC90 /* TransportView.swift */,
 				CB7D7BC52BD3DA1F00832B55 /* FiltersView.swift */,
+				CB7D7BCE2BD3E83200832B55 /* TransportOperatorInfoView.swift */,
 				CBBFFBC22BCECCB600C2482B /* SearchCityView.swift */,
 				CBBFFBD02BCEF6F600C2482B /* SearchStationView.swift */,
 				CBB6A32B2BD038A6005505C9 /* SettingsView.swift */,
@@ -183,6 +188,7 @@
 				CBB6A3382BD0529C005505C9 /* ErrorType.swift */,
 				CB63A3D42BD14C4C00D9B4A7 /* DirectionType.swift */,
 				CBB0690C2BD2E53E00B1EC90 /* Route.swift */,
+				CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				CB3E15F72BCD8197004C9E8F /* SplashView.swift in Sources */,
 				CB4FDC4B2B9CAB08005E1EF9 /* NearestSettlementService.swift in Sources */,
 				CB24773F2B90CE6000E41476 /* ContentView.swift in Sources */,
+				CB7D7BCF2BD3E83300832B55 /* TransportOperatorInfoView.swift in Sources */,
 				CB7D7BC62BD3DA1F00832B55 /* FiltersView.swift in Sources */,
 				CBB6A3372BD05214005505C9 /* ErrorView.swift in Sources */,
 				CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */,
@@ -297,6 +304,7 @@
 				CB63A3D52BD14C4C00D9B4A7 /* DirectionType.swift in Sources */,
 				CBE2D67B2B96472200924855 /* NearestStationsService.swift in Sources */,
 				CB24773D2B90CE6000E41476 /* TravelScheduleApp.swift in Sources */,
+				CB4D71662BD422A600D5DCF9 /* TransportOperator.swift in Sources */,
 				CBBFFBC32BCECCB600C2482B /* SearchCityView.swift in Sources */,
 				CB7D7BCC2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift in Sources */,
 				CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */,
