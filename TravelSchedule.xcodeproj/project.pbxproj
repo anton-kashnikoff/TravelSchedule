@@ -15,6 +15,7 @@
 		CB3E15F92BCD857E004C9E8F /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */; };
 		CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */; };
 		CB4D71662BD422A600D5DCF9 /* TransportOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */; };
+		CB4D71692BD4381F00D5DCF9 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D71682BD4381F00D5DCF9 /* PrivacyPolicyView.swift */; };
 		CB4FDC442B9CA829005E1EF9 /* SearchRoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */; };
 		CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */; };
 		CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */; };
@@ -56,6 +57,7 @@
 		CB3E15F82BCD857E004C9E8F /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOperator.swift; sourceTree = "<group>"; };
+		CB4D71682BD4381F00D5DCF9 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoutesService.swift; sourceTree = "<group>"; };
 		CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				CB3E15F62BCD8197004C9E8F /* SplashView.swift */,
 				CB24773E2B90CE6000E41476 /* ContentView.swift */,
 				CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */,
+				CB4D71682BD4381F00D5DCF9 /* PrivacyPolicyView.swift */,
 				CBB069092BD2E41300B1EC90 /* TransportView.swift */,
 				CB7D7BC52BD3DA1F00832B55 /* FiltersView.swift */,
 				CB7D7BCE2BD3E83200832B55 /* TransportOperatorInfoView.swift */,
@@ -313,6 +316,7 @@
 				CBBFFBC62BCECD9400C2482B /* ScheduleViewModel.swift in Sources */,
 				CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */,
 				CBBFFBD12BCEF6F600C2482B /* SearchStationView.swift in Sources */,
+				CB4D71692BD4381F00D5DCF9 /* PrivacyPolicyView.swift in Sources */,
 				CBB0690A2BD2E41300B1EC90 /* TransportView.swift in Sources */,
 				CBB0690D2BD2E53E00B1EC90 /* Route.swift in Sources */,
 				CBB6A32C2BD038A6005505C9 /* SettingsView.swift in Sources */,

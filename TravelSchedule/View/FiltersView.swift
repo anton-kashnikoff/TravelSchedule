@@ -114,7 +114,7 @@ struct FiltersView: View {
             
             if isYes || isNo {
                 Button {
-                    
+                    path.removeLast()
                 } label: {
                     Text("Применить")
                         .font(.system(size: 17, weight: .bold))
