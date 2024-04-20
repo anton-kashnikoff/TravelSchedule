@@ -116,7 +116,9 @@ struct ScheduleView: View {
                 } else if id == "SearchStationViewTo" {
                     SearchStationView(viewModel: viewModel, path: $path, type: .to)
                 } else if id == "TransportView" {
-                    TransportView(viewModel: viewModel)
+                    TransportView(viewModel: viewModel, path: $path)
+                } else if id == "FiltersView" {
+                    FiltersView(viewModel: viewModel)
                 }
             }
         }

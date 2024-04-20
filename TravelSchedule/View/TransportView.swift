@@ -10,6 +10,8 @@ import SwiftUI
 struct TransportView: View {
     @ObservedObject var viewModel: ScheduleViewModel
     
+    @Binding var path: [String]
+    
     var body: some View {
         ZStack {
             VStack(spacing: 16) {
@@ -86,7 +88,7 @@ struct TransportView: View {
             VStack {
                 Spacer()
                 Button {
-                    
+                    path.append("FiltersView")
                 } label: {
                     Text("Уточнить время")
                         .foregroundStyle(.whiteUniversal)
@@ -102,5 +104,5 @@ struct TransportView: View {
 }
 
 #Preview {
-    TransportView(viewModel: ScheduleViewModel())
+    TransportView(viewModel: ScheduleViewModel(), path: .constant([]))
 }
