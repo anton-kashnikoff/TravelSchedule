@@ -126,6 +126,7 @@ struct FiltersView: View {
             }
         }
         .toolbarRole(.editor)
+        .background(.whiteYP)
     }
 }
 

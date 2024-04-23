@@ -9,7 +9,12 @@ import SwiftUI
 
 struct PrivacyPolicyView: View {
     var body: some View {
-        VStack {
+        let width: CGFloat? = {
+            let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+            return scene?.screen.bounds.width
+        }()
+        
+        VStack(spacing: 8) {
             Text("Оферта на оказание образовательных услуг дополнительного образования Яндекс.Практикум для физических лиц")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.blackYP)
@@ -22,10 +27,12 @@ struct PrivacyPolicyView: View {
             )
             .font(.system(size: 17))
             .foregroundStyle(.blackYP)
-            .padding(.top, 8)
+            .padding([.leading, .trailing], 8)
             Spacer()
         }
+        .frame(width: width)
         .navigationTitle("Пользовательское соглашение")
+        .background(.whiteYP)
     }
 }
 

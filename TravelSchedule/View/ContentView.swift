@@ -18,15 +18,14 @@ struct ContentView: View {
                 ScheduleView(viewModel: viewModel)
                     .tabItem {
                         Image("Schedule")
-                            .renderingMode(.template)
                     }
                 
                 SettingsView(darkModeEnabled: $darkModeEnabled)
                     .tabItem {
                         Image("Settings")
-                            .renderingMode(.template)
                     }
             }
+            .tint(.accent)
             .onAppear {
                 ThemeManager.shared.handleTheme(darkMode: darkModeEnabled)
             }

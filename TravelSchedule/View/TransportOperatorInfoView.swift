@@ -15,6 +15,7 @@ struct TransportOperatorInfoView: View {
     var body: some View {
         VStack(spacing: 16) {
             Image(transportOperator.image)
+                .padding(.top)
             HStack {
                 Text("ОАО «РЖД»")
                     .font(.system(size: 24, weight: .bold))
@@ -62,6 +63,7 @@ struct TransportOperatorInfoView: View {
         }
         .navigationTitle("Информация о перевозчике")
         .toolbarRole(.editor)
+        .background(.whiteYP)
     }
 }
 

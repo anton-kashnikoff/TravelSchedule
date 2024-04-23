@@ -19,7 +19,7 @@ struct TransportView: View {
                     Text(viewModel.routeString)
                         .frame(alignment: .leading)
                         .font(.system(size: 24, weight: .bold))
-                        .foregroundStyle(.blackUniversal)
+                        .foregroundStyle(.blackYP)
                         .padding(.leading, 16)
                     Spacer()
                 }
@@ -84,14 +84,16 @@ struct TransportView: View {
                             }
                         }
                         .background(.lightGrayUniversal)
+                        .listRowBackground(Color.whiteYP)
                         .clipShape(RoundedRectangle(cornerRadius: 24))
                         .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
                     }
                     .listStyle(.plain)
-                    .background(.whiteYP)
                     .scrollContentBackground(.hidden)
                 }
             }
+            .background(.whiteYP)
+            
             VStack {
                 Spacer()
                 Button {

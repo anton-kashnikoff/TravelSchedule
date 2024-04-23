@@ -50,7 +50,7 @@ struct ScheduleView: View {
                                     text: from,
                                     prompt: Text("Откуда").foregroundStyle(.grayUniversal)
                                 )
-                                .foregroundStyle(.blackYP)
+                                .foregroundStyle(.blackUniversal)
                                 .padding(.leading)
                                 .onTapGesture {
                                     path.append("SearchCityViewFrom")
@@ -61,7 +61,7 @@ struct ScheduleView: View {
                                     text: to,
                                     prompt: Text("Куда").foregroundStyle(.grayUniversal)
                                 )
-                                .foregroundStyle(.blackYP)
+                                .foregroundStyle(.blackUniversal)
                                 .padding(.leading)
                                 .onTapGesture {
                                     path.append("SearchCityViewTo")
@@ -130,6 +130,7 @@ struct ScheduleView: View {
             }
         }
         .background(.whiteYP)
+        .tint(.accent)
     }
 }
 
