@@ -23,7 +23,7 @@ struct FiltersView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Время отправления")
+                Text(Constants.departureTimeText)
                     .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(.blackYP)
                 Spacer()
@@ -75,7 +75,7 @@ struct FiltersView: View {
             .padding([.leading, .trailing])
             
             HStack {
-                Text("Показывать варианты с пересадками")
+                Text(Constants.transfersOptionsText)
                     .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(.blackYP)
                 Spacer()
@@ -83,7 +83,7 @@ struct FiltersView: View {
             .padding()
             
             HStack {
-                Text("Да")
+                Text(Constants.yesText)
                     .font(.system(size: 17))
                     .foregroundStyle(.blackYP)
                 Spacer()
@@ -97,7 +97,7 @@ struct FiltersView: View {
             .padding([.leading, .trailing])
             
             HStack {
-                Text("Нет")
+                Text(Constants.noText)
                     .font(.system(size: 17))
                     .foregroundStyle(.blackYP)
                 Spacer()
@@ -116,7 +116,7 @@ struct FiltersView: View {
                 Button {
                     path.removeLast()
                 } label: {
-                    Text("Применить")
+                    Text(Constants.applyButtonText)
                         .font(.system(size: 17, weight: .bold))
                         .foregroundStyle(.whiteUniversal)
                 }

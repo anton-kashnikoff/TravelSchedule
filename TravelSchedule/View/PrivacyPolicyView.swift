@@ -31,7 +31,7 @@ struct PrivacyPolicyView: View {
             Spacer()
         }
         .frame(width: width)
-        .navigationTitle("Пользовательское соглашение")
+        .navigationTitle(Constants.privacyPolicyText)
         .background(.whiteYP)
     }
 }

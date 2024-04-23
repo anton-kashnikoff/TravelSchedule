@@ -37,7 +37,7 @@ struct SearchStationView: View {
             SearchBar(searchText: $searchString)
             if !searchString.isEmpty && searchResults.isEmpty {
                 Spacer()
-                Text("Станция не найдена")
+                Text(Constants.stationIsNotFoundText)
                     .font(.system(size: 24, weight: .bold))
                 Spacer()
             } else {
@@ -64,7 +64,7 @@ struct SearchStationView: View {
             }
         }
         .background(.whiteYP)
-        .navigationTitle("Выбор станции")
+        .navigationTitle(Constants.chooseStationText)
         .toolbarRole(.editor)
         .toolbar(.hidden, for: .tabBar)
     }

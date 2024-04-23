@@ -37,9 +37,9 @@ struct ScheduleView: View {
                         HStack(spacing: 16) {
                             VStack(spacing: 28) {
                                 TextField(
-                                    "Откуда",
+                                    Constants.fromText,
                                     text: from,
-                                    prompt: Text("Откуда").foregroundStyle(.grayUniversal)
+                                    prompt: Text(Constants.fromText).foregroundStyle(.grayUniversal)
                                 )
                                 .foregroundStyle(.blackUniversal)
                                 .padding(.leading)
@@ -48,9 +48,9 @@ struct ScheduleView: View {
                                 }
                                 
                                 TextField(
-                                    "Куда",
+                                    Constants.toText,
                                     text: to,
-                                    prompt: Text("Куда").foregroundStyle(.grayUniversal)
+                                    prompt: Text(Constants.toText).foregroundStyle(.grayUniversal)
                                 )
                                 .foregroundStyle(.blackUniversal)
                                 .padding(.leading)
@@ -77,7 +77,7 @@ struct ScheduleView: View {
                     }
                     .padding(.horizontal, 10)
                     
-                    Button("Найти") {
+                    Button(Constants.findButtonText) {
                         path.append("TransportView")
                     }
                     .frame(width: 150, height: 60)

@@ -27,7 +27,7 @@ struct SearchCityView: View {
             SearchBar(searchText: $searchString)
             if !searchString.isEmpty && searchResults.isEmpty {
                 Spacer()
-                Text("Город не найден")
+                Text(Constants.cityIsNotFoundText)
                     .font(.system(size: 24, weight: .bold))
                 Spacer()
             } else {
@@ -60,7 +60,7 @@ struct SearchCityView: View {
             }
         }
         .background(.whiteYP)
-        .navigationTitle("Выбор города")
+        .navigationTitle(Constants.chooseCityText)
         .toolbarRole(.editor)
         .toolbar(.hidden, for: .tabBar)
     }

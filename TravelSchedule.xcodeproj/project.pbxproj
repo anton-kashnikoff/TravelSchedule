@@ -23,6 +23,7 @@
 		CB4FDC512B9CACEB005E1EF9 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC502B9CACEB005E1EF9 /* StationsListService.swift */; };
 		CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC522B9CAD37005E1EF9 /* CopyrightService.swift */; };
 		CB63A3D52BD14C4C00D9B4A7 /* DirectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB63A3D42BD14C4C00D9B4A7 /* DirectionType.swift */; };
+		CB7B71E92BD840D50082EC8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7B71E82BD840D50082EC8D /* Constants.swift */; };
 		CB7D7BC62BD3DA1F00832B55 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D7BC52BD3DA1F00832B55 /* FiltersView.swift */; };
 		CB7D7BC92BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D7BC82BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift */; };
 		CB7D7BCC2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D7BCB2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift */; };
@@ -65,6 +66,7 @@
 		CB4FDC502B9CACEB005E1EF9 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
 		CB4FDC522B9CAD37005E1EF9 /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		CB63A3D42BD14C4C00D9B4A7 /* DirectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionType.swift; sourceTree = "<group>"; };
+		CB7B71E82BD840D50082EC8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB7D7BC52BD3DA1F00832B55 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		CB7D7BC82BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		CB7D7BCB2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonCustomToggleStyle.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				CBB0690E2BD2E7C700B1EC90 /* DateCreator.swift */,
 				CB7D7BC82BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift */,
 				CB7D7BCB2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift */,
+				CB7B71E82BD840D50082EC8D /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				CB7D7BCF2BD3E83300832B55 /* TransportOperatorInfoView.swift in Sources */,
 				CB7D7BC62BD3DA1F00832B55 /* FiltersView.swift in Sources */,
 				CBB6A3372BD05214005505C9 /* ErrorView.swift in Sources */,
+				CB7B71E92BD840D50082EC8D /* Constants.swift in Sources */,
 				CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */,
 				CBB6A3392BD0529C005505C9 /* ErrorType.swift in Sources */,
 				CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */,

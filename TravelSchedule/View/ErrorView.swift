@@ -15,11 +15,11 @@ struct ErrorView: View {
             switch errorType {
             case .serverError:
                 Image(.serverError)
-                Text("Ошибка сервера")
+                Text(Constants.serverErrorText)
                     .font(.system(size: 24, weight: .bold))
             case .noInternetConnection:
                 Image(.noInternet)
-                Text("Нет интернета")
+                Text(Constants.internetErrorText)
                     .font(.system(size: 24, weight: .bold))
             }
             

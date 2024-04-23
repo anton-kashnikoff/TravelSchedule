@@ -12,7 +12,7 @@ struct SearchBar: View {
     
     @State private var isSearching = false
     
-    private let placeholder = "Введите запрос"
+    private let placeholder = Constants.searchBarPlaceholder
     
     var body: some View {
         HStack(spacing: 0) {

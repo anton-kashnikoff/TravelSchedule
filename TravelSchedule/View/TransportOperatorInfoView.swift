@@ -27,7 +27,7 @@ struct TransportOperatorInfoView: View {
             VStack(spacing: 0) {
                 VStack {
                     HStack {
-                        Text("E-mail")
+                        Text(Constants.emailText)
                             .font(.system(size: 17))
                             .foregroundStyle(.blackYP)
                         Spacer()
@@ -44,7 +44,7 @@ struct TransportOperatorInfoView: View {
                 
                 VStack {
                     HStack {
-                        Text("Телефон")
+                        Text(Constants.phoneText)
                             .font(.system(size: 17))
                             .foregroundStyle(.blackYP)
                         Spacer()
@@ -61,7 +61,7 @@ struct TransportOperatorInfoView: View {
             }
             Spacer()
         }
-        .navigationTitle("Информация о перевозчике")
+        .navigationTitle(Constants.transportOperatorInfoText)
         .toolbarRole(.editor)
         .background(.whiteYP)
     }

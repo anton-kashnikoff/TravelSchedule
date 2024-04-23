@@ -25,7 +25,7 @@ struct TransportView: View {
                 }
                 
                 if viewModel.getListOfRoutes().isEmpty {
-                    Text("Вариантов нет")
+                    Text(Constants.noOptionsText)
                         .font(.system(size: 24, weight: .bold))
                         .foregroundStyle(.blackYP)
                 } else {
@@ -99,7 +99,7 @@ struct TransportView: View {
                 Button {
                     path.append("FiltersView")
                 } label: {
-                    Text("Уточнить время")
+                    Text(Constants.specifyTimeButtonText)
                         .foregroundStyle(.whiteUniversal)
                         .font(.system(size: 17, weight: .bold))
                 }

@@ -16,7 +16,7 @@ struct SettingsView: View {
         NavigationStack(path: $path) {
             VStack {
                 HStack {
-                    Text("Темная тема")
+                    Text(Constants.darkThemeText)
                         .padding(.leading)
                         .foregroundStyle(.blackYP)
                     Spacer()
@@ -30,7 +30,7 @@ struct SettingsView: View {
                 .frame(height: 60)
                 
                 HStack {
-                    Text("Пользовательское соглашение")
+                    Text(Constants.privacyPolicyText)
                         .padding(.leading)
                         .foregroundStyle(.blackYP)
                     Spacer()
@@ -43,12 +43,12 @@ struct SettingsView: View {
                 }
                 
                 Spacer()
-                Text("Приложение использует API «Яндекс.Расписания»")
+                Text(Constants.apiAlertText)
                     .font(.system(size: 12))
                     .foregroundStyle(.blackYP)
                 Spacer()
                     .frame(height: 16)
-                Text("Версия 1.0 (beta)")
+                Text(Constants.apiVersionText)
                     .font(.system(size: 12))
                     .foregroundStyle(.blackYP)
                 Spacer()
