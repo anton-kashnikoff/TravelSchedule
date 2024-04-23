@@ -53,14 +53,8 @@ struct SearchStationView: View {
                         .frame(height: 60)
                         .listRowSeparator(.hidden)
                         .onTapGesture {
-                            switch type {
-                            case .from:
-                                viewModel.selectedStationFrom = station
-                                path.removeAll()
-                            case .to:
-                                viewModel.selectedStationTo = station
-                                path.removeAll()
-                            }
+                            viewModel.addStation(direction: type, station: station)
+                            path.removeAll()
                         }
                     }
                     .background(.whiteYP)

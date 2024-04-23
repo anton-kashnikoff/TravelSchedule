@@ -13,25 +13,16 @@ struct ScheduleView: View {
     @ObservedObject var viewModel: ScheduleViewModel
     
     var body: some View {
-        // Я не знаю, как сделать проще, чем 2 Binding
         let from = Binding<String>(get: {
-            guard
-                let city = viewModel.selectedCityFrom,
-                let station = viewModel.selectedStationFrom
-            else { return "" }
-            return "\(city.name) (\(station))"
+            viewModel.routeFrom
         }) { newValue in
-            viewModel.selectedStationFrom = newValue
+            viewModel.routeFrom = newValue
         }
         
         let to = Binding<String>(get: {
-            guard
-                let city = viewModel.selectedCityTo,
-                let station = viewModel.selectedStationTo
-            else { return "" }
-            return "\(city.name) (\(station))"
+            viewModel.routeTo
         }) { newValue in
-            viewModel.selectedStationTo = newValue
+            viewModel.routeTo = newValue
         }
         
         NavigationStack(path: $path) {

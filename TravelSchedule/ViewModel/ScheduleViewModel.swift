@@ -15,9 +15,24 @@ final class ScheduleViewModel: ObservableObject {
     @Published var selectedCityTo: City?
     @Published var selectedStationTo: String?
     
+    var routeFrom: String {
+        get {
+            guard let selectedCityFrom, let selectedStationFrom else { return "" }
+            return "\(selectedCityFrom.name) (\(selectedStationFrom))"
+        }
+        set {}
+    }
+    
+    var routeTo: String {
+        get {
+            guard let selectedCityTo, let selectedStationTo else { return "" }
+            return "\(selectedCityTo.name) (\(selectedStationTo))"
+        }
+        set {}
+    }
+    
     var routeString: String {
-        guard let selectedCityFrom, let selectedCityTo, let selectedStationFrom, let selectedStationTo else { return "" }
-        return "\(selectedCityFrom.name) (\(selectedStationFrom)) -> \(selectedCityTo.name) (\(selectedStationTo))"
+        "\(routeFrom) -> \(routeTo)"
     }
     
     var departureTime: [String] {
@@ -105,5 +120,14 @@ final class ScheduleViewModel: ObservableObject {
                 info: nil
             )
         ]
+    }
+    
+    func addStation(direction: DirectionType, station: String) {
+        switch direction {
+        case .from:
+            selectedStationFrom = station
+        case .to:
+            selectedStationTo = station
+        }
     }
 }
