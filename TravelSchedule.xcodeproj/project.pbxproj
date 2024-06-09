@@ -18,6 +18,8 @@
 		CB16BC282C15BF0600EBEBD0 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC272C15BF0600EBEBD0 /* ProgressBar.swift */; };
 		CB16BC2D2C15BF7300EBEBD0 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC2C2C15BF7200EBEBD0 /* CGFloat+Extensions.swift */; };
 		CB16BC302C15CC1D00EBEBD0 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC2F2C15CC1D00EBEBD0 /* Font+Extensions.swift */; };
+		CB16BC332C15D12200EBEBD0 /* StoriesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC322C15D12200EBEBD0 /* StoriesScrollView.swift */; };
+		CB16BC362C15D16200EBEBD0 /* StoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC352C15D16200EBEBD0 /* StoryItemView.swift */; };
 		CB24773D2B90CE6000E41476 /* TravelScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */; };
 		CB24773F2B90CE6000E41476 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB24773E2B90CE6000E41476 /* ContentView.swift */; };
 		CB2477412B90CE6100E41476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2477402B90CE6100E41476 /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		CB16BC272C15BF0600EBEBD0 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		CB16BC2C2C15BF7200EBEBD0 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		CB16BC2F2C15CC1D00EBEBD0 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		CB16BC322C15D12200EBEBD0 /* StoriesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollView.swift; sourceTree = "<group>"; };
+		CB16BC352C15D16200EBEBD0 /* StoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryItemView.swift; sourceTree = "<group>"; };
 		CB2477392B90CE6000E41476 /* TravelSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelScheduleApp.swift; sourceTree = "<group>"; };
 		CB24773E2B90CE6000E41476 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				CBB6A32B2BD038A6005505C9 /* SettingsView.swift */,
 				CBBFFBC82BCED43200C2482B /* SearchBar.swift */,
 				CBB6A3362BD05214005505C9 /* ErrorView.swift */,
+				CB16BC322C15D12200EBEBD0 /* StoriesScrollView.swift */,
+				CB16BC352C15D16200EBEBD0 /* StoryItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -377,6 +383,8 @@
 				CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */,
 				CBB0690F2BD2E7C700B1EC90 /* DateCreator.swift in Sources */,
 				CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */,
+				CB16BC362C15D16200EBEBD0 /* StoryItemView.swift in Sources */,
+				CB16BC332C15D12200EBEBD0 /* StoriesScrollView.swift in Sources */,
 				CBBFFBC62BCECD9400C2482B /* ScheduleViewModel.swift in Sources */,
 				CB16BC302C15CC1D00EBEBD0 /* Font+Extensions.swift in Sources */,
 				CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */,

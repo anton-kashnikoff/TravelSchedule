@@ -26,14 +26,16 @@ struct ScheduleView: View {
         }
         
         NavigationStack(path: $path) {
-            VStack {
-                Spacer()
+            VStack(spacing: 20) {
+                StoriesScrollView()
+                
                 VStack(spacing: 16) {
                     ZStack {
                         Rectangle()
                             .fill(.blueUniversal)
                             .frame(height: 128)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
+                        
                         HStack(spacing: 16) {
                             VStack(spacing: 28) {
                                 TextField(
