@@ -21,7 +21,6 @@ struct StoriesView: View {
         ZStack(alignment: .topTrailing) {
             StoriesTabView(stories: stories, localCurrentStoryIndex: $localCurrentStoryIndex)
                 .onChange(of: localCurrentStoryIndex) {
-//                    print("CHANGE INDEX = \(localCurrentStoryIndex)")
                     didChangeCurrentIndex(oldIndex: $0, newIndex: $1)
                 }
 
@@ -31,7 +30,6 @@ struct StoriesView: View {
                 currentProgress: $currentProgress
             )
             .onChange(of: currentProgress) { _, newValue in
-//                print(localCurrentStoryIndex)
                 didChangeCurrentProgress(newProgress: newValue)
             }
         }

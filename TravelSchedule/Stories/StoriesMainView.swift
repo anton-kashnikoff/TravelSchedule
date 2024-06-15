@@ -15,7 +15,7 @@ struct StoriesMainView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             StoriesView(
-                stories: viewModel.getStories(startingWith: viewModel.currenstStoryIndex)
+                stories: viewModel.getStories(startingWith: viewModel.currentStoryIndex)
             )
             
             CloseButton {

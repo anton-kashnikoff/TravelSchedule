@@ -10,7 +10,7 @@ import SwiftUI
 final class ScheduleViewModel: ObservableObject {
     let stories: [Story] = [.story1, .story2, .story3]
     
-    @Published var currenstStoryIndex = 0
+    @Published var currentStoryIndex = 0
     
     @Published var cities: [City]
     
