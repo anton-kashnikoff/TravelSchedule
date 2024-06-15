@@ -8,21 +8,30 @@
 import SwiftUI
 
 struct StoriesMainView: View {
-    let stories: [Story]
+    @ObservedObject var viewModel: ScheduleViewModel
+    
+    @Binding var path: [String]
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            StoriesView(stories: stories)
+            StoriesView(
+                stories: viewModel.getStories(startingWith: viewModel.currenstStoryIndex)
+            )
             
             CloseButton {
-                print("Close Story")
+                path.removeLast()
             }
             .padding(.top, 57)
             .padding(.trailing, 12)
         }
+        .navigationBarBackButtonHidden()
+        .background(.blackUniversal)
     }
 }
 
 #Preview {
-    StoriesMainView(stories: [.story1, .story2, .story3])
+    StoriesMainView(
+        viewModel: ScheduleViewModel(),
+        path: .constant([])
+    )
 }

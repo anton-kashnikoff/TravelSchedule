@@ -14,7 +14,6 @@ struct StoryView: View {
         story.backgroundImage
             .resizable()
             .clipShape(.rect(cornerRadius: .storyCornerRadius))
-            .background(.blackUniversal)
             .overlay(
                 VStack {
                     Spacer()

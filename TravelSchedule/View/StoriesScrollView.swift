@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct StoriesScrollView: View {
+    let stories: [Story]
+    
+    @Binding var currentStoryIndex: Int
+    @Binding var path: [String]
+    
     var body: some View {
         ScrollView(.horizontal) {
             HStack(spacing: 12) {
-                ForEach(1..<4) { _ in 
-                    StoryItemView(story: .story1)
+                ForEach(stories) {
+                    StoryItemView(
+                        story: $0,
+                        currentStoryIndex: $currentStoryIndex,
+                        path: $path
+                    )
                 }
             }
             .padding(.vertical, 24)
@@ -22,5 +31,9 @@ struct StoriesScrollView: View {
 }
 
 #Preview {
-    StoriesScrollView()
+    StoriesScrollView(
+        stories: [.story1, .story2, .story3], 
+        currentStoryIndex: .constant(0), 
+        path: .constant([])
+    )
 }

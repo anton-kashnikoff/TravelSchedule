@@ -14,13 +14,14 @@ struct StoriesView: View {
         .init(storiesCount: stories.count)
     }
     
-    @State private var currentStoryIndex = 0
+    @State private var localCurrentStoryIndex = 0
     @State private var currentProgress: CGFloat = 0
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            StoriesTabView(stories: stories, currentStoryIndex: $currentStoryIndex)
-                .onChange(of: currentStoryIndex) {
+            StoriesTabView(stories: stories, localCurrentStoryIndex: $localCurrentStoryIndex)
+                .onChange(of: localCurrentStoryIndex) {
+//                    print("CHANGE INDEX = \(localCurrentStoryIndex)")
                     didChangeCurrentIndex(oldIndex: $0, newIndex: $1)
                 }
 
@@ -30,6 +31,7 @@ struct StoriesView: View {
                 currentProgress: $currentProgress
             )
             .onChange(of: currentProgress) { _, newValue in
+//                print(localCurrentStoryIndex)
                 didChangeCurrentProgress(newProgress: newValue)
             }
         }
@@ -42,22 +44,18 @@ struct StoriesView: View {
         
         guard abs(progress - currentProgress) >= 0.01 else { return }
         
-//        withAnimation {
-            currentProgress = progress
-//        }
+        currentProgress = progress
     }
 
     private func didChangeCurrentProgress(newProgress: CGFloat) {
         let index = timerConfiguration.index(for: newProgress)
         
-        guard index != currentStoryIndex else { return }
+        guard index != localCurrentStoryIndex else { return }
         
-//        withAnimation {
-            currentStoryIndex = index
-//        }
+        localCurrentStoryIndex = index
     }
 }
 
 #Preview {
-    StoriesView(stories: [.story1, .story2, .story3])
+    StoriesView(stories: [.story2, .story3])
 }
