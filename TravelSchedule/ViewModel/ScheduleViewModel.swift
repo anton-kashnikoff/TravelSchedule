@@ -19,14 +19,6 @@ final class ScheduleViewModel: ObservableObject {
     @Published var selectedCityTo: City?
     @Published var selectedStationTo: String?
     
-//    func getStories(startingWith index: Int) -> [Story] {
-//        let filterStories = stories
-//        
-//        return filterStories.filter { story in
-//            story.id >= index
-//        }
-//    }
-    
     var routeFrom: String {
         get {
             guard let selectedCityFrom, let selectedStationFrom else { return "" }

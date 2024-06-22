@@ -33,6 +33,7 @@ struct StoryItemView: View {
         }
         .onTapGesture {
             currentStoryIndex = story.id
+            
             path.append("StoryItemView")
         }
     }
