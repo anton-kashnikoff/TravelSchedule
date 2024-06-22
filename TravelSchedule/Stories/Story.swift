@@ -33,4 +33,18 @@ struct Story: Identifiable {
         title: "Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 ",
         description: "Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 "
     )
+    
+    static let story4 = Story(
+        id: 3,
+        backgroundImage: Image("Story4"),
+        title: "Text4 Text4 Text4 Text4 Text4 Text4 Text4 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 ",
+        description: "Text4 Text4 Text4 Text4 Text4 Text4 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 "
+    )
+    
+    static let story5 = Story(
+        id: 4,
+        backgroundImage: Image("Story5"),
+        title: "Text5 Text5 Text5 Text4 Text4 Text4 Text4 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 ",
+        description: "Text5 Text5 Text4 Text4 Text4 Text4 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 Text3 "
+    )
 }

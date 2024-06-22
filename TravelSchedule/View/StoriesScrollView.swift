@@ -32,7 +32,7 @@ struct StoriesScrollView: View {
 
 #Preview {
     StoriesScrollView(
-        stories: [.story1, .story2, .story3], 
+        stories: [.story1, .story2, .story3, .story4, .story5], 
         currentStoryIndex: .constant(0), 
         path: .constant([])
     )

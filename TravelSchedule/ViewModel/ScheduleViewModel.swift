@@ -8,7 +8,7 @@
 import SwiftUI
 
 final class ScheduleViewModel: ObservableObject {
-    let stories: [Story] = [.story1, .story2, .story3]
+    let stories: [Story] = [.story1, .story2, .story3, .story4, .story5]
     
     @Published var currentStoryIndex = 0
     
@@ -19,13 +19,13 @@ final class ScheduleViewModel: ObservableObject {
     @Published var selectedCityTo: City?
     @Published var selectedStationTo: String?
     
-    func getStories(startingWith index: Int) -> [Story] {
-        let filterStories = stories
-        
-        return filterStories.filter { story in
-            story.id >= index
-        }
-    }
+//    func getStories(startingWith index: Int) -> [Story] {
+//        let filterStories = stories
+//        
+//        return filterStories.filter { story in
+//            story.id >= index
+//        }
+//    }
     
     var routeFrom: String {
         get {

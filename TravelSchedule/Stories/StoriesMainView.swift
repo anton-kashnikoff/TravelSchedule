@@ -15,7 +15,7 @@ struct StoriesMainView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             StoriesView(
-                stories: viewModel.getStories(startingWith: viewModel.currentStoryIndex)
+                viewModel: viewModel
             )
             
             CloseButton {
@@ -26,6 +26,10 @@ struct StoriesMainView: View {
         }
         .navigationBarBackButtonHidden()
         .background(.blackUniversal)
+        .onAppear(perform: {
+            print("CURRENT INDEX")
+            print(viewModel.currentStoryIndex)
+        })
     }
 }
 

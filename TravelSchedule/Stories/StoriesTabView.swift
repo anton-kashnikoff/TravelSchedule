@@ -10,10 +10,12 @@ import SwiftUI
 struct StoriesTabView: View {
     let stories: [Story]
     
-    @Binding var localCurrentStoryIndex: Int
+//    @Binding var localCurrentStoryIndex: Int
+    
+    @ObservedObject var viewModel: ScheduleViewModel
 
     var body: some View {
-        TabView(selection: $localCurrentStoryIndex) {
+        TabView(selection: $viewModel.currentStoryIndex) {
             ForEach(stories) { story in
                 StoryView(story: story)
                     .onTapGesture {
@@ -23,18 +25,13 @@ struct StoriesTabView: View {
         }
         .ignoresSafeArea()
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .onAppear {
-            print("TABVIEW")
-            print(stories)
-            print(localCurrentStoryIndex)
-        }
     }
 
     private func didTapStory() {
-        localCurrentStoryIndex = min(localCurrentStoryIndex + 1, stories.count - 1)
+        viewModel.currentStoryIndex = min(viewModel.currentStoryIndex + 1, stories.count - 1)
     }
 }
 
 #Preview {
-    StoriesTabView(stories: [.story2, .story3], localCurrentStoryIndex: .constant(0))
+    StoriesTabView(stories: [.story2, .story3, .story4, .story5], viewModel: ScheduleViewModel())
 }

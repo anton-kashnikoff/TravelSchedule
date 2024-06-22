@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct StoriesView: View {
-    let stories: [Story]
-    
     private var timerConfiguration: TimerConfiguration {
-        .init(storiesCount: stories.count)
+        .init(storiesCount: viewModel.stories.count)
     }
     
-    @State private var localCurrentStoryIndex = 0
     @State private var currentProgress: CGFloat = 0
+    
+    @ObservedObject var viewModel: ScheduleViewModel
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            StoriesTabView(stories: stories, localCurrentStoryIndex: $localCurrentStoryIndex)
-                .onChange(of: localCurrentStoryIndex) {
+            StoriesTabView(stories: viewModel.stories, viewModel: viewModel)
+                .onChange(of: viewModel.currentStoryIndex) {
                     didChangeCurrentIndex(oldIndex: $0, newIndex: $1)
                 }
 
             StoriesProgressBar(
-                storiesCount: stories.count,
+                storiesCount: viewModel.stories.count,
                 timerConfiguration: timerConfiguration,
                 currentProgress: $currentProgress
             )
@@ -47,13 +46,12 @@ struct StoriesView: View {
 
     private func didChangeCurrentProgress(newProgress: CGFloat) {
         let index = timerConfiguration.index(for: newProgress)
+        guard index != viewModel.currentStoryIndex else { return }
         
-        guard index != localCurrentStoryIndex else { return }
-        
-        localCurrentStoryIndex = index
+        viewModel.currentStoryIndex = index
     }
 }
 
 #Preview {
-    StoriesView(stories: [.story2, .story3])
+    StoriesView(viewModel: ScheduleViewModel())
 }
