@@ -120,7 +120,7 @@ struct ScheduleView: View {
                 } else if id == "TransportOperatorInfoViewRZHD" {
                     TransportOperatorInfoView(
                         viewModel: viewModel,
-                        transportOperator: TransportOperator(
+                        transportOperator: .init(
                             image: "Logo RZHD",
                             name: "РЖД",
                             email: "i.lozgkina@yandex.ru",

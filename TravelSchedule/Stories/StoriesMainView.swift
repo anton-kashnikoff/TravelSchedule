@@ -15,7 +15,6 @@ struct StoriesMainView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             StoriesView(
-                currentProgress: min(CGFloat(viewModel.currentStoryIndex) / CGFloat(viewModel.stories.count), 1),
                 viewModel: viewModel
             )
             
@@ -27,10 +26,6 @@ struct StoriesMainView: View {
         }
         .navigationBarBackButtonHidden()
         .background(.blackUniversal)
-        .onAppear(perform: {
-            print("CURRENT INDEX")
-            print(viewModel.currentStoryIndex)
-        })
     }
 }
 

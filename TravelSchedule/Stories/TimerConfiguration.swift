@@ -25,19 +25,11 @@ struct TimerConfiguration {
 
 extension TimerConfiguration {
     func progress(for storyIndex: Int) -> CGFloat {
-        let min = min(CGFloat(storyIndex) / CGFloat(storiesCount), 1)
-        print("progressmin = \(min)")
-        return min
+        min(CGFloat(storyIndex) / CGFloat(storiesCount), 1)
     }
 
     func index(for progress: CGFloat) -> Int {
-        let min1 = Int(progress * CGFloat(storiesCount))
-        print("MIN1 = \(min1)")
-        let min2 = storiesCount - 1
-        print("MIN2 = \(min2)")
-        let min = min(min1, min2)
-        print("MIN = \(min)")
-        return min
+        min(Int(progress * CGFloat(storiesCount)), storiesCount - 1)
     }
 
     func nextProgress(progress: CGFloat) -> CGFloat {
