@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB16BC142C15BB0800EBEBD0 /* StoriesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC132C15BB0800EBEBD0 /* StoriesMainView.swift */; };
+		CB16BC162C15BB6B00EBEBD0 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC152C15BB6B00EBEBD0 /* Story.swift */; };
+		CB16BC182C15BC0500EBEBD0 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC172C15BC0500EBEBD0 /* StoriesView.swift */; };
+		CB16BC1A2C15BC2E00EBEBD0 /* TimerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC192C15BC2E00EBEBD0 /* TimerConfiguration.swift */; };
+		CB16BC1C2C15BCD300EBEBD0 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC1B2C15BCD300EBEBD0 /* CloseButton.swift */; };
+		CB16BC1F2C15BDB500EBEBD0 /* StoriesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC1E2C15BDB500EBEBD0 /* StoriesTabView.swift */; };
+		CB16BC222C15BDDC00EBEBD0 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC212C15BDDC00EBEBD0 /* StoryView.swift */; };
+		CB16BC252C15BE9B00EBEBD0 /* StoriesProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC242C15BE9B00EBEBD0 /* StoriesProgressBar.swift */; };
+		CB16BC282C15BF0600EBEBD0 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC272C15BF0600EBEBD0 /* ProgressBar.swift */; };
+		CB16BC302C15CC1D00EBEBD0 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC2F2C15CC1D00EBEBD0 /* Font+Extensions.swift */; };
+		CB16BC332C15D12200EBEBD0 /* StoriesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC322C15D12200EBEBD0 /* StoriesScrollView.swift */; };
+		CB16BC362C15D16200EBEBD0 /* StoryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC352C15D16200EBEBD0 /* StoryItemView.swift */; };
 		CB24773D2B90CE6000E41476 /* TravelScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */; };
 		CB24773F2B90CE6000E41476 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB24773E2B90CE6000E41476 /* ContentView.swift */; };
 		CB2477412B90CE6100E41476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2477402B90CE6100E41476 /* Assets.xcassets */; };
@@ -40,6 +52,9 @@
 		CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBC82BCED43200C2482B /* SearchBar.swift */; };
 		CBBFFBCF2BCEF40200C2482B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBCE2BCEF40200C2482B /* City.swift */; };
 		CBBFFBD12BCEF6F600C2482B /* SearchStationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFFBD02BCEF6F600C2482B /* SearchStationView.swift */; };
+		CBCD08F02C30184A009B12BF /* MaskFragmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCD08EF2C30184A009B12BF /* MaskFragmentView.swift */; };
+		CBCD08F22C301866009B12BF /* MaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCD08F12C301866009B12BF /* MaskView.swift */; };
+		CBCD08F42C301996009B12BF /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCD08F32C301996009B12BF /* Mocks.swift */; };
 		CBE09FB82BD4702300EF4DE0 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE09FB72BD4702300EF4DE0 /* Launch Screen.storyboard */; };
 		CBE2D66F2B96454D00924855 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CBE2D66E2B96454D00924855 /* OpenAPIRuntime */; };
 		CBE2D6722B96458600924855 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = CBE2D6712B96458600924855 /* OpenAPIURLSession */; };
@@ -49,6 +64,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB16BC132C15BB0800EBEBD0 /* StoriesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesMainView.swift; sourceTree = "<group>"; };
+		CB16BC152C15BB6B00EBEBD0 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		CB16BC172C15BC0500EBEBD0 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
+		CB16BC192C15BC2E00EBEBD0 /* TimerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConfiguration.swift; sourceTree = "<group>"; };
+		CB16BC1B2C15BCD300EBEBD0 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		CB16BC1E2C15BDB500EBEBD0 /* StoriesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTabView.swift; sourceTree = "<group>"; };
+		CB16BC212C15BDDC00EBEBD0 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		CB16BC242C15BE9B00EBEBD0 /* StoriesProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesProgressBar.swift; sourceTree = "<group>"; };
+		CB16BC272C15BF0600EBEBD0 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		CB16BC2F2C15CC1D00EBEBD0 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		CB16BC322C15D12200EBEBD0 /* StoriesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesScrollView.swift; sourceTree = "<group>"; };
+		CB16BC352C15D16200EBEBD0 /* StoryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryItemView.swift; sourceTree = "<group>"; };
 		CB2477392B90CE6000E41476 /* TravelSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelScheduleApp.swift; sourceTree = "<group>"; };
 		CB24773E2B90CE6000E41476 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +110,9 @@
 		CBBFFBC82BCED43200C2482B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CBBFFBCE2BCEF40200C2482B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		CBBFFBD02BCEF6F600C2482B /* SearchStationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStationView.swift; sourceTree = "<group>"; };
+		CBCD08EF2C30184A009B12BF /* MaskFragmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskFragmentView.swift; sourceTree = "<group>"; };
+		CBCD08F12C301866009B12BF /* MaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskView.swift; sourceTree = "<group>"; };
+		CBCD08F32C301996009B12BF /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		CBE09FB72BD4702300EF4DE0 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CBE09FBC2BD4720D00EF4DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE2D6752B96464200924855 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
@@ -103,6 +133,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB16BC122C15BAB100EBEBD0 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				CB16BC132C15BB0800EBEBD0 /* StoriesMainView.swift */,
+				CB16BC1B2C15BCD300EBEBD0 /* CloseButton.swift */,
+				CB16BC172C15BC0500EBEBD0 /* StoriesView.swift */,
+				CB16BC242C15BE9B00EBEBD0 /* StoriesProgressBar.swift */,
+				CB16BC272C15BF0600EBEBD0 /* ProgressBar.swift */,
+				CBCD08F12C301866009B12BF /* MaskView.swift */,
+				CBCD08EF2C30184A009B12BF /* MaskFragmentView.swift */,
+				CB16BC1E2C15BDB500EBEBD0 /* StoriesTabView.swift */,
+				CB16BC212C15BDDC00EBEBD0 /* StoryView.swift */,
+				CB16BC192C15BC2E00EBEBD0 /* TimerConfiguration.swift */,
+				CB16BC152C15BB6B00EBEBD0 /* Story.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		CB16BC2B2C15BF6200EBEBD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB16BC2F2C15CC1D00EBEBD0 /* Font+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CB2477302B90CE6000E41476 = {
 			isa = PBXGroup;
 			children = (
@@ -122,9 +178,10 @@
 		CB24773B2B90CE6000E41476 /* TravelSchedule */ = {
 			isa = PBXGroup;
 			children = (
-				CBE09FBC2BD4720D00EF4DE0 /* Info.plist */,
-				CBB6A3352BD0509F005505C9 /* Helpers */,
 				CB24773C2B90CE6000E41476 /* TravelScheduleApp.swift */,
+				CB16BC2B2C15BF6200EBEBD0 /* Extensions */,
+				CB16BC122C15BAB100EBEBD0 /* Stories */,
+				CBB6A3352BD0509F005505C9 /* Helpers */,
 				CBB6A3342BD05078005505C9 /* Model */,
 				CBB6A3332BD05060005505C9 /* View */,
 				CBB6A3312BD0504B005505C9 /* ViewModel */,
@@ -133,6 +190,7 @@
 				CBE09FB72BD4702300EF4DE0 /* Launch Screen.storyboard */,
 				CBE2D6752B96464200924855 /* openapi.yaml */,
 				CBE2D6772B96466C00924855 /* openapi-generator-config.yaml */,
+				CBE09FBC2BD4720D00EF4DE0 /* Info.plist */,
 				CB2477422B90CE6100E41476 /* Preview Content */,
 			);
 			path = TravelSchedule;
@@ -184,6 +242,8 @@
 				CBB6A32B2BD038A6005505C9 /* SettingsView.swift */,
 				CBBFFBC82BCED43200C2482B /* SearchBar.swift */,
 				CBB6A3362BD05214005505C9 /* ErrorView.swift */,
+				CB16BC322C15D12200EBEBD0 /* StoriesScrollView.swift */,
+				CB16BC352C15D16200EBEBD0 /* StoryItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +256,7 @@
 				CB63A3D42BD14C4C00D9B4A7 /* DirectionType.swift */,
 				CBB0690C2BD2E53E00B1EC90 /* Route.swift */,
 				CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */,
+				CBCD08F32C301996009B12BF /* Mocks.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,32 +359,47 @@
 				CB4FDC4E2B9CAC9E005E1EF9 /* CarrierService.swift in Sources */,
 				CB3E15F72BCD8197004C9E8F /* SplashView.swift in Sources */,
 				CB4FDC4B2B9CAB08005E1EF9 /* NearestSettlementService.swift in Sources */,
+				CB16BC162C15BB6B00EBEBD0 /* Story.swift in Sources */,
 				CB24773F2B90CE6000E41476 /* ContentView.swift in Sources */,
 				CB7D7BCF2BD3E83300832B55 /* TransportOperatorInfoView.swift in Sources */,
+				CB16BC252C15BE9B00EBEBD0 /* StoriesProgressBar.swift in Sources */,
 				CB7D7BC62BD3DA1F00832B55 /* FiltersView.swift in Sources */,
 				CBB6A3372BD05214005505C9 /* ErrorView.swift in Sources */,
 				CB7B71E92BD840D50082EC8D /* Constants.swift in Sources */,
+				CB16BC222C15BDDC00EBEBD0 /* StoryView.swift in Sources */,
 				CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */,
 				CBB6A3392BD0529C005505C9 /* ErrorType.swift in Sources */,
+				CB16BC1C2C15BCD300EBEBD0 /* CloseButton.swift in Sources */,
 				CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */,
+				CB16BC282C15BF0600EBEBD0 /* ProgressBar.swift in Sources */,
 				CB4FDC512B9CACEB005E1EF9 /* StationsListService.swift in Sources */,
+				CBCD08F42C301996009B12BF /* Mocks.swift in Sources */,
+				CB16BC1F2C15BDB500EBEBD0 /* StoriesTabView.swift in Sources */,
 				CBB6A32F2BD04C88005505C9 /* ThemeManager.swift in Sources */,
 				CB4FDC442B9CA829005E1EF9 /* SearchRoutesService.swift in Sources */,
+				CB16BC142C15BB0800EBEBD0 /* StoriesMainView.swift in Sources */,
+				CBCD08F02C30184A009B12BF /* MaskFragmentView.swift in Sources */,
 				CBBFFBCF2BCEF40200C2482B /* City.swift in Sources */,
 				CB63A3D52BD14C4C00D9B4A7 /* DirectionType.swift in Sources */,
 				CBE2D67B2B96472200924855 /* NearestStationsService.swift in Sources */,
 				CB24773D2B90CE6000E41476 /* TravelScheduleApp.swift in Sources */,
+				CB16BC1A2C15BC2E00EBEBD0 /* TimerConfiguration.swift in Sources */,
 				CB4D71662BD422A600D5DCF9 /* TransportOperator.swift in Sources */,
 				CBBFFBC32BCECCB600C2482B /* SearchCityView.swift in Sources */,
 				CB7D7BCC2BD3DF7F00832B55 /* RadioButtonCustomToggleStyle.swift in Sources */,
 				CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */,
 				CBB0690F2BD2E7C700B1EC90 /* DateCreator.swift in Sources */,
 				CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */,
+				CB16BC362C15D16200EBEBD0 /* StoryItemView.swift in Sources */,
+				CB16BC332C15D12200EBEBD0 /* StoriesScrollView.swift in Sources */,
 				CBBFFBC62BCECD9400C2482B /* ScheduleViewModel.swift in Sources */,
+				CB16BC302C15CC1D00EBEBD0 /* Font+Extensions.swift in Sources */,
 				CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */,
+				CBCD08F22C301866009B12BF /* MaskView.swift in Sources */,
 				CBBFFBD12BCEF6F600C2482B /* SearchStationView.swift in Sources */,
 				CB4D71692BD4381F00D5DCF9 /* PrivacyPolicyView.swift in Sources */,
 				CBB0690A2BD2E41300B1EC90 /* TransportView.swift in Sources */,
+				CB16BC182C15BC0500EBEBD0 /* StoriesView.swift in Sources */,
 				CBB0690D2BD2E53E00B1EC90 /* Route.swift in Sources */,
 				CBB6A32C2BD038A6005505C9 /* SettingsView.swift in Sources */,
 				CB7D7BC92BD3DC5A00832B55 /* CustomCheckboxToggleStyle.swift in Sources */,

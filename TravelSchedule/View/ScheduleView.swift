@@ -26,14 +26,21 @@ struct ScheduleView: View {
         }
         
         NavigationStack(path: $path) {
-            VStack {
-                Spacer()
+            VStack(spacing: 20) {
+                StoriesScrollView(
+                    stories: viewModel.stories,
+                    viewModel: viewModel,
+                    currentStoryIndex: $viewModel.currentStoryIndex,
+                    path: $path
+                )
+                
                 VStack(spacing: 16) {
                     ZStack {
                         Rectangle()
                             .fill(.blueUniversal)
                             .frame(height: 128)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .clipShape(.rect(cornerRadius: 20))
+                        
                         HStack(spacing: 16) {
                             VStack(spacing: 28) {
                                 TextField(
@@ -60,7 +67,7 @@ struct ScheduleView: View {
                             }
                             .frame(height: 96)
                             .background(.whiteUniversal)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .clipShape(.rect(cornerRadius: 20))
                             .padding(.leading, 16)
                             
                             Button {
@@ -83,8 +90,8 @@ struct ScheduleView: View {
                     .frame(width: 150, height: 60)
                     .background(.blueUniversal)
                     .foregroundStyle(.whiteUniversal)
-                    .font(.system(size: 17, weight: .bold))
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .font(.bold17)
+                    .clipShape(.rect(cornerRadius: 16))
                     .opacity(
                         (viewModel.selectedStationFrom == nil ||
                          viewModel.selectedStationTo == nil) ? 0 : 1
@@ -95,7 +102,6 @@ struct ScheduleView: View {
                 Rectangle()
                     .frame(height: 0.5)
                     .foregroundStyle(.black.opacity(0.3))
-                
             }
             .navigationDestination(for: String.self) { id in
                 if id == "SearchCityViewFrom" {
@@ -110,13 +116,18 @@ struct ScheduleView: View {
                     TransportView(viewModel: viewModel, path: $path)
                 } else if id == "FiltersView" {
                     FiltersView(viewModel: viewModel, path: $path)
+                } else if id == "StoryItemView" {
+                    StoriesMainView(viewModel: viewModel, path: $path)
                 } else if id == "TransportOperatorInfoViewRZHD" {
-                    TransportOperatorInfoView(viewModel: viewModel, transportOperator: TransportOperator(
-                        image: "Logo RZHD",
-                        name: "РЖД",
-                        email: "i.lozgkina@yandex.ru",
-                        phoneNumber: "+7 (904) 329-27-71"
-                    ))
+                    TransportOperatorInfoView(
+                        viewModel: viewModel,
+                        transportOperator: .init(
+                            image: "Logo RZHD",
+                            name: "РЖД",
+                            email: "i.lozgkina@yandex.ru",
+                            phoneNumber: "+7 (904) 329-27-71"
+                        )
+                    )
                 }
             }
         }
@@ -126,5 +137,5 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(viewModel: ScheduleViewModel())
+    ScheduleView(viewModel: .init())
 }

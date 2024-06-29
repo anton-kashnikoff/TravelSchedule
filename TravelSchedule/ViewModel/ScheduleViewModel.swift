@@ -8,12 +8,22 @@
 import SwiftUI
 
 final class ScheduleViewModel: ObservableObject {
+    let stories: [Story] = Mocks.stories
+    
+    @Published var currentStoryIndex = 0 {
+        didSet {
+            viewedStories.append(stories[currentStoryIndex])
+        }
+    }
+    
     @Published var cities: [City]
     
     @Published var selectedCityFrom: City?
     @Published var selectedStationFrom: String?
     @Published var selectedCityTo: City?
     @Published var selectedStationTo: String?
+    
+    var viewedStories = [Story]()
     
     var routeFrom: String {
         get {
