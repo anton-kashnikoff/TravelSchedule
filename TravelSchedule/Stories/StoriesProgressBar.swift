@@ -14,7 +14,7 @@ struct StoriesProgressBar: View {
     
     @Binding var currentProgress: CGFloat
     
-    @State private var timer: Timer.TimerPublisher
+    @State private var timer = Timer.TimerPublisher(interval: 0.3, runLoop: .main, mode: .common)
     @State private var cancellable: Cancellable?
 
     init(storiesCount: Int, timerConfiguration: TimerConfiguration, currentProgress: Binding<CGFloat>) {
