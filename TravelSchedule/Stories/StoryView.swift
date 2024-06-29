@@ -13,7 +13,7 @@ struct StoryView: View {
     var body: some View {
         story.backgroundImage
             .resizable()
-            .clipShape(.rect(cornerRadius: .storyCornerRadius))
+            .clipShape(.rect(cornerRadius: Constants.storyCornerRadius))
             .overlay(
                 VStack {
                     Spacer()
@@ -36,5 +36,5 @@ struct StoryView: View {
 }
 
 #Preview {
-    StoryView(story: .story1)
+    StoryView(story: Mocks.story1)
 }

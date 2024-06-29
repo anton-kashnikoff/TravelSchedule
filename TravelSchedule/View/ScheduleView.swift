@@ -29,6 +29,7 @@ struct ScheduleView: View {
             VStack(spacing: 20) {
                 StoriesScrollView(
                     stories: viewModel.stories,
+                    viewModel: viewModel,
                     currentStoryIndex: $viewModel.currentStoryIndex,
                     path: $path
                 )
@@ -136,5 +137,5 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(viewModel: ScheduleViewModel())
+    ScheduleView(viewModel: .init())
 }

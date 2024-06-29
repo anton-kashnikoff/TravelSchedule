@@ -10,6 +10,8 @@ import SwiftUI
 struct StoriesScrollView: View {
     let stories: [Story]
     
+    @ObservedObject var viewModel: ScheduleViewModel
+    
     @Binding var currentStoryIndex: Int
     @Binding var path: [String]
     
@@ -19,6 +21,7 @@ struct StoriesScrollView: View {
                 ForEach(stories) {
                     StoryItemView(
                         story: $0,
+                        viewModel: viewModel,
                         currentStoryIndex: $currentStoryIndex,
                         path: $path
                     )
@@ -27,13 +30,15 @@ struct StoriesScrollView: View {
             .padding(.vertical, 24)
             .padding(.horizontal)
         }
+        .scrollIndicators(.hidden)
     }
 }
 
 #Preview {
     StoriesScrollView(
-        stories: [.story1, .story2, .story3, .story4, .story5], 
-        currentStoryIndex: .constant(0), 
+        stories: [Mocks.story1, Mocks.story2, Mocks.story3, Mocks.story4, Mocks.story5],
+        viewModel: .init(),
+        currentStoryIndex: .constant(0),
         path: .constant([])
     )
 }

@@ -5,6 +5,8 @@
 //  Created by Антон Кашников on 23/04/2024.
 //
 
+import Foundation
+
 enum Constants {
     static let morningText = "Утро 06:00 - 12:00"
     static let dayText = "День 12:00 - 18:00"
@@ -41,4 +43,8 @@ enum Constants {
     
     static let serverErrorText = "Ошибка сервера"
     static let internetErrorText = "Нет интернета"
+    
+    static let progressBarCornerRadius: CGFloat = 3
+    static let progressBarHeight: CGFloat = 6
+    static let storyCornerRadius: CGFloat = 40
 }

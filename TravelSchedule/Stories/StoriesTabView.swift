@@ -10,8 +10,6 @@ import SwiftUI
 struct StoriesTabView: View {
     let stories: [Story]
     
-//    @Binding var localCurrentStoryIndex: Int
-    
     @ObservedObject var viewModel: ScheduleViewModel
 
     var body: some View {
@@ -33,5 +31,8 @@ struct StoriesTabView: View {
 }
 
 #Preview {
-    StoriesTabView(stories: [.story2, .story3, .story4, .story5], viewModel: ScheduleViewModel())
+    StoriesTabView(
+        stories: [Mocks.story2, Mocks.story3, Mocks.story4, Mocks.story5], 
+        viewModel: ScheduleViewModel()
+    )
 }
