@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @Binding var searchText: String
+    private let placeholder = Constants.searchBarPlaceholder
     
     @State private var isSearching = false
     
-    private let placeholder = Constants.searchBarPlaceholder
+    @Binding var searchText: String
     
     var body: some View {
-        HStack(spacing: 0) {
-            HStack(spacing: 0) {
+        HStack(spacing: .zero) {
+            HStack(spacing: .zero) {
                 HStack {
                     TextField(placeholder, text: $searchText)
                         .font(.system(size: 17))
@@ -26,7 +26,7 @@ struct SearchBar: View {
                         .textInputAutocapitalization(.never)
                 }
                 .padding()
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .clipShape(.rect(cornerRadius: 16))
                 .padding(.horizontal)
                 .onTapGesture {
                     isSearching = true
@@ -44,7 +44,7 @@ struct SearchBar: View {
                         
                         if isSearching {
                             Button {
-                                searchText = ""
+                                searchText.removeAll()
                             } label: {
                                 Image(systemName: "xmark.circle.fill")
                                     .foregroundStyle(.grayUniversal)
@@ -59,7 +59,7 @@ struct SearchBar: View {
             }
             .frame(height: 37)
             .background(.searchBarBackground)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .clipShape(.rect(cornerRadius: 10))
         }
         .frame(height: 37)
         .padding(.horizontal, 16)
@@ -67,5 +67,7 @@ struct SearchBar: View {
 }
 
 #Preview {
-    SearchBar(searchText: .constant(""))
+    @Previewable @State var text = String()
+
+    SearchBar(searchText: $text)
 }

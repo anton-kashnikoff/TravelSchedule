@@ -5,11 +5,9 @@
 //  Created by Антон Кашников on 04/03/2024.
 //
 
-// 1. Импортируем библиотеки
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-// 2. Улучшаем читаемость кода — необязательный шаг
 typealias NearestStations = Components.Schemas.Stations
 
 protocol NearestStationsServiceProtocol {

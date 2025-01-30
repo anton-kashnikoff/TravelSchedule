@@ -16,45 +16,38 @@ struct TransportOperatorInfoView: View {
         VStack(spacing: 16) {
             Image(transportOperator.image)
                 .padding(.top)
-            HStack {
-                Text("ОАО «РЖД»")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(.blackYP)
-                Spacer()
-            }
-            .padding([.leading, .top])
+
+            Text("ОАО «РЖД»")
+                .font(.system(size: 24, weight: .bold))
+                .foregroundStyle(.blackYP)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding([.leading, .top])
             
-            VStack(spacing: 0) {
+            VStack(spacing: .zero) {
                 VStack {
-                    HStack {
-                        Text(Constants.emailText)
-                            .font(.system(size: 17))
-                            .foregroundStyle(.blackYP)
-                        Spacer()
-                    }
-                    HStack {
-                        Text(transportOperator.email)
-                            .font(.system(size: 12))
-                            .foregroundStyle(.blueUniversal)
-                        Spacer()
-                    }
+                    Text(Constants.emailText)
+                        .font(.system(size: 17))
+                        .foregroundStyle(.blackYP)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text(transportOperator.email)
+                        .font(.system(size: 12))
+                        .foregroundStyle(.blueUniversal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .frame(height: 60)
                 .padding(.leading)
                 
                 VStack {
-                    HStack {
-                        Text(Constants.phoneText)
-                            .font(.system(size: 17))
-                            .foregroundStyle(.blackYP)
-                        Spacer()
-                    }
-                    HStack {
-                        Text(transportOperator.email)
-                            .font(.system(size: 12))
-                            .foregroundStyle(.blueUniversal)
-                        Spacer()
-                    }
+                    Text(Constants.phoneText)
+                        .font(.system(size: 17))
+                        .foregroundStyle(.blackYP)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text(transportOperator.email)
+                        .font(.system(size: 12))
+                        .foregroundStyle(.blueUniversal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .frame(height: 60)
                 .padding(.leading)
@@ -68,10 +61,13 @@ struct TransportOperatorInfoView: View {
 }
 
 #Preview {
-    TransportOperatorInfoView(viewModel: ScheduleViewModel(), transportOperator: TransportOperator(
-        image: "Logo RZHD",
-        name: "РЖД",
-        email: "i.lozgkina@yandex.ru",
-        phoneNumber: "+7 (904) 329-27-71"
-    ))
+    TransportOperatorInfoView(
+        viewModel: ScheduleViewModel(),
+        transportOperator: TransportOperator(
+            image: "Logo RZHD",
+            name: "РЖД",
+            email: "i.lozgkina@yandex.ru",
+            phoneNumber: "+7 (904) 329-27-71"
+        )
+    )
 }

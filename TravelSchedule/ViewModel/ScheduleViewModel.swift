@@ -5,10 +5,10 @@
 //  Created by Антон Кашников on 16/04/2024.
 //
 
-import SwiftUI
+import Foundation
 
 final class ScheduleViewModel: ObservableObject {
-    let stories: [Story] = Mocks.stories
+    let stories = Mocks.stories
     
     @Published var currentStoryIndex = 0 {
         didSet {
@@ -25,24 +25,19 @@ final class ScheduleViewModel: ObservableObject {
     
     var viewedStories = [Story]()
     
-    var routeFrom: String {
-        get {
-            guard let selectedCityFrom, let selectedStationFrom else { return "" }
-            return "\(selectedCityFrom.name) (\(selectedStationFrom))"
-        }
-        set {}
+    var routeFrom: String? {
+        guard let selectedCityFrom, let selectedStationFrom else { return nil }
+        return "\(selectedCityFrom.name) (\(selectedStationFrom))"
     }
     
-    var routeTo: String {
-        get {
-            guard let selectedCityTo, let selectedStationTo else { return "" }
-            return "\(selectedCityTo.name) (\(selectedStationTo))"
-        }
-        set {}
+    var routeTo: String? {
+        guard let selectedCityTo, let selectedStationTo else { return nil }
+        return "\(selectedCityTo.name) (\(selectedStationTo))"
     }
     
     var routeString: String {
-        "\(routeFrom) -> \(routeTo)"
+        guard let routeFrom, let routeTo else { return String() }
+        return "\(routeFrom) -> \(routeTo)"
     }
     
     var departureTime: [String] {
@@ -131,5 +126,14 @@ final class ScheduleViewModel: ObservableObject {
         case .to:
             selectedStationTo = station
         }
+    }
+
+    func swapDirections() {
+        let city = selectedCityFrom
+        let station = selectedStationFrom
+        selectedCityFrom = selectedCityTo
+        selectedStationFrom = selectedStationTo
+        selectedCityTo = city
+        selectedStationTo = station
     }
 }

@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct SearchCityView: View {
-    @ObservedObject var viewModel: ScheduleViewModel
-    
-    @State private var searchString = ""
-    
-    @Binding var path: [String]
-    
-    var type: DirectionType
+    @State private var searchString = String()
     
     private var searchResults: [City] {
         searchString.isEmpty ? viewModel.cities : viewModel.cities.filter {
@@ -22,14 +16,20 @@ struct SearchCityView: View {
         }
     }
     
+    @ObservedObject var viewModel: ScheduleViewModel
+    
+    @Binding var path: [String]
+    
+    var type: DirectionType
+    
     var body: some View {
         VStack {
             SearchBar(searchText: $searchString)
             if !searchString.isEmpty && searchResults.isEmpty {
-                Spacer()
-                Text(Constants.cityIsNotFoundText)
-                    .font(.system(size: 24, weight: .bold))
-                Spacer()
+                ContentUnavailableView {
+                    Text(Constants.cityIsNotFoundText)
+                        .font(.system(size: 24, weight: .bold))
+                }
             } else {
                 List {
                     ForEach(searchResults, id: \.name) { city in
@@ -54,7 +54,14 @@ struct SearchCityView: View {
                         }
                     }
                     .background(.whiteYP)
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .listRowInsets(
+                        EdgeInsets(
+                            top: .zero,
+                            leading: .zero,
+                            bottom: .zero,
+                            trailing: .zero
+                        )
+                    )
                 }
                 .listStyle(.plain)
             }
@@ -68,6 +75,8 @@ struct SearchCityView: View {
 
 #Preview {
     SearchCityView(
-        viewModel: ScheduleViewModel(), path: .constant([]), type: .from
+        viewModel: ScheduleViewModel(),
+        path: .constant([]),
+        type: .from
     )
 }

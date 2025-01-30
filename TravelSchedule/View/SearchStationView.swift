@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct SearchStationView: View {
-    @ObservedObject var viewModel: ScheduleViewModel
-    
-    @State private var searchString = ""
-    
-    @Binding var path: [String]
-    
-    var type: DirectionType
+    @State private var searchString = String()
     
     private var searchResults: [String] {
         let city = switch type {
@@ -29,17 +23,24 @@ struct SearchStationView: View {
                 $0.contains(searchString)
             }
         }
+
         return []
     }
+    
+    @ObservedObject var viewModel: ScheduleViewModel
+    
+    @Binding var path: [String]
+    
+    var type: DirectionType
     
     var body: some View {
         VStack {
             SearchBar(searchText: $searchString)
             if !searchString.isEmpty && searchResults.isEmpty {
-                Spacer()
-                Text(Constants.stationIsNotFoundText)
-                    .font(.system(size: 24, weight: .bold))
-                Spacer()
+                ContentUnavailableView {
+                    Text(Constants.stationIsNotFoundText)
+                        .font(.system(size: 24, weight: .bold))
+                }
             } else {
                 List {
                     ForEach(searchResults, id: \.self) { station in
@@ -58,7 +59,14 @@ struct SearchStationView: View {
                         }
                     }
                     .background(.whiteYP)
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    .listRowInsets(
+                        EdgeInsets(
+                            top: .zero,
+                            leading: .zero,
+                            bottom: .zero,
+                            trailing: .zero
+                        )
+                    )
                 }
                 .listStyle(.plain)
             }

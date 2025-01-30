@@ -13,18 +13,6 @@ struct ScheduleView: View {
     @ObservedObject var viewModel: ScheduleViewModel
     
     var body: some View {
-        let from = Binding<String>(get: {
-            viewModel.routeFrom
-        }) { newValue in
-            viewModel.routeFrom = newValue
-        }
-        
-        let to = Binding<String>(get: {
-            viewModel.routeTo
-        }) { newValue in
-            viewModel.routeTo = newValue
-        }
-        
         NavigationStack(path: $path) {
             VStack(spacing: 20) {
                 StoriesScrollView(
@@ -42,39 +30,32 @@ struct ScheduleView: View {
                             .clipShape(.rect(cornerRadius: 20))
                         
                         HStack(spacing: 16) {
-                            VStack(spacing: 28) {
-                                TextField(
-                                    Constants.fromText,
-                                    text: from,
-                                    prompt: Text(Constants.fromText).foregroundStyle(.grayUniversal)
-                                )
-                                .foregroundStyle(.blackUniversal)
-                                .padding(.leading)
-                                .onTapGesture {
-                                    path.append("SearchCityViewFrom")
-                                }
+                            VStack(alignment: .leading, spacing: 28) {
+                                Text(viewModel.routeFrom ?? Constants.fromText)
+                                    .foregroundStyle(
+                                        viewModel.selectedCityFrom == nil ? .grayUniversal : .blackUniversal
+                                    )
+                                    .onTapGesture {
+                                        path.append("SearchCityViewFrom")
+                                    }
                                 
-                                TextField(
-                                    Constants.toText,
-                                    text: to,
-                                    prompt: Text(Constants.toText).foregroundStyle(.grayUniversal)
-                                )
-                                .foregroundStyle(.blackUniversal)
-                                .padding(.leading)
-                                .onTapGesture {
-                                    path.append("SearchCityViewTo")
-                                }
+                                Text(viewModel.routeTo ?? Constants.toText)
+                                    .foregroundStyle(
+                                        viewModel.selectedCityTo == nil ? .grayUniversal : .blackUniversal
+                                    )
+                                    .onTapGesture {
+                                        path.append("SearchCityViewTo")
+                                    }
                             }
+                            .lineLimit(1)
+                            .padding(.leading)
                             .frame(height: 96)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .background(.whiteUniversal)
                             .clipShape(.rect(cornerRadius: 20))
                             .padding(.leading, 16)
                             
-                            Button {
-                                let temp = viewModel.selectedStationFrom
-                                viewModel.selectedStationFrom = viewModel.selectedStationTo
-                                viewModel.selectedStationTo = temp
-                            } label: {
+                            Button(action: viewModel.swapDirections) {
                                 Image("Сhange")
                                     .resizable()
                                     .frame(width: 36, height: 36)
@@ -84,14 +65,10 @@ struct ScheduleView: View {
                     }
                     .padding(.horizontal, 10)
                     
-                    Button(Constants.findButtonText) {
-                        path.append("TransportView")
-                    }
-                    .frame(width: 150, height: 60)
-                    .background(.blueUniversal)
-                    .foregroundStyle(.whiteUniversal)
-                    .font(.bold17)
-                    .clipShape(.rect(cornerRadius: 16))
+                    BlueButton(
+                        text: Constants.findButtonText,
+                        size: CGSize(width: 150, height: 60)
+                    ) { path.append("TransportView") }
                     .opacity(
                         (viewModel.selectedStationFrom == nil ||
                          viewModel.selectedStationTo == nil) ? 0 : 1
@@ -137,5 +114,5 @@ struct ScheduleView: View {
 }
 
 #Preview {
-    ScheduleView(viewModel: .init())
+    ScheduleView(viewModel: ScheduleViewModel())
 }

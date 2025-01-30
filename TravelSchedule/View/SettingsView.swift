@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var isPresentWebView = false
+    
     @Binding var darkModeEnabled: Bool
     
-    @State private var path = [String]()
-    
     var body: some View {
-        NavigationStack(path: $path) {
             VStack {
                 HStack {
                     Text(Constants.darkThemeText)
                         .padding(.leading)
                         .foregroundStyle(.blackYP)
+                    
                     Spacer()
                     Toggle("", isOn: $darkModeEnabled)
                         .padding(.trailing)
@@ -33,41 +33,45 @@ struct SettingsView: View {
                     Text(Constants.privacyPolicyText)
                         .padding(.leading)
                         .foregroundStyle(.blackYP)
+                    
                     Spacer()
                     Image(.chevron)
                         .padding(.trailing)
                 }
                 .frame(height: 60)
                 .onTapGesture {
-                    path.append("PrivacyPolicyView")
+                    isPresentWebView = true
                 }
                 
                 Spacer()
                 Text(Constants.apiAlertText)
                     .font(.system(size: 12))
                     .foregroundStyle(.blackYP)
+                
                 Spacer()
                     .frame(height: 16)
+                
                 Text(Constants.apiVersionText)
                     .font(.system(size: 12))
                     .foregroundStyle(.blackYP)
+                
                 Spacer()
                     .frame(height: 24)
+                
                 Rectangle()
                     .frame(height: 0.5)
                     .foregroundStyle(.black.opacity(0.3))
             }
-            .navigationDestination(for: String.self) { id in
-                if id == "PrivacyPolicyView" {
-                    PrivacyPolicyView()
-                }
+            .background(.whiteYP)
+            .toolbarRole(.editor)
+            .sheet(isPresented: $isPresentWebView) {
+                WebView(url: URL(string: "https://yandex.ru/legal/timetable_api/")!)
             }
-        }
-        .background(.whiteYP)
-        .toolbarRole(.editor)
     }
 }
 
 #Preview {
-    SettingsView(darkModeEnabled: .constant(false))
+    @Previewable @State var darkModeEnabled = false
+    
+    SettingsView(darkModeEnabled: $darkModeEnabled)
 }

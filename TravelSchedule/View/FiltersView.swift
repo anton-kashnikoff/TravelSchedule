@@ -22,13 +22,11 @@ struct FiltersView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text(Constants.departureTimeText)
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(.blackYP)
-                Spacer()
-            }
-            .padding()
+            Text(Constants.departureTimeText)
+                .font(.system(size: 24, weight: .bold))
+                .foregroundStyle(.blackYP)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
             
             HStack {
                 Text(viewModel.departureTime[0])
@@ -36,7 +34,7 @@ struct FiltersView: View {
                     .foregroundStyle(.blackYP)
                 Spacer()
                 Toggle(isOn: $isMorning) {}
-                .toggleStyle(CustomCheckboxToggleStyle())
+                    .toggleStyle(CustomCheckboxToggleStyle())
             }
             .frame(height: 60)
             .padding([.leading, .trailing])
@@ -47,7 +45,7 @@ struct FiltersView: View {
                     .foregroundStyle(.blackYP)
                 Spacer()
                 Toggle(isOn: $isDay) {}
-                .toggleStyle(CustomCheckboxToggleStyle())
+                    .toggleStyle(CustomCheckboxToggleStyle())
             }
             .frame(height: 60)
             .padding([.leading, .trailing])
@@ -58,7 +56,7 @@ struct FiltersView: View {
                     .foregroundStyle(.blackYP)
                 Spacer()
                 Toggle(isOn: $isEvening) {}
-                .toggleStyle(CustomCheckboxToggleStyle())
+                    .toggleStyle(CustomCheckboxToggleStyle())
             }
             .frame(height: 60)
             .padding([.leading, .trailing])
@@ -69,18 +67,16 @@ struct FiltersView: View {
                     .foregroundStyle(.blackYP)
                 Spacer()
                 Toggle(isOn: $isNight) {}
-                .toggleStyle(CustomCheckboxToggleStyle())
+                    .toggleStyle(CustomCheckboxToggleStyle())
             }
             .frame(height: 60)
             .padding([.leading, .trailing])
-            
-            HStack {
-                Text(Constants.transfersOptionsText)
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundStyle(.blackYP)
-                Spacer()
-            }
-            .padding()
+
+            Text(Constants.transfersOptionsText)
+                .font(.system(size: 24, weight: .bold))
+                .foregroundStyle(.blackYP)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
             
             HStack {
                 Text(Constants.yesText)
@@ -88,10 +84,10 @@ struct FiltersView: View {
                     .foregroundStyle(.blackYP)
                 Spacer()
                 Toggle(isOn: $isYes) {}
-                .toggleStyle(RadioButtonCustomToggleStyle())
-                .onChange(of: isYes) { oldValue, _ in
-                    isNo = oldValue
-                }
+                    .toggleStyle(RadioButtonCustomToggleStyle())
+                    .onChange(of: isYes) { oldValue, _ in
+                        isNo = oldValue
+                    }
             }
             .frame(height: 60)
             .padding([.leading, .trailing])
@@ -113,16 +109,10 @@ struct FiltersView: View {
             Spacer()
             
             if isYes || isNo {
-                Button {
-                    path.removeLast()
-                } label: {
-                    Text(Constants.applyButtonText)
-                        .font(.system(size: 17, weight: .bold))
-                        .foregroundStyle(.whiteUniversal)
-                }
-                .frame(width: 343, height: 60)
-                .background(.blueUniversal)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+                BlueButton(
+                    text: Constants.applyButtonText,
+                    size: CGSize(width: 343, height: 60)
+                ) { path.removeLast() }
             }
         }
         .toolbarRole(.editor)

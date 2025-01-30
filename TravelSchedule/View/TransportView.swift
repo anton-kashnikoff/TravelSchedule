@@ -46,12 +46,10 @@ struct TransportView: View {
                                         }
                                         
                                         if let info = route.info {
-                                            HStack {
-                                                Text(info)
-                                                    .font(.system(size: 12))
-                                                    .foregroundStyle(.redUniversal)
-                                                Spacer()
-                                            }
+                                            Text(info)
+                                                .font(.system(size: 12))
+                                                .foregroundStyle(.redUniversal)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
                                         }
                                     }
                                 }
@@ -85,7 +83,7 @@ struct TransportView: View {
                         }
                         .background(.lightGrayUniversal)
                         .listRowBackground(Color.whiteYP)
-                        .clipShape(RoundedRectangle(cornerRadius: 24))
+                        .clipShape(.rect(cornerRadius: 24))
                         .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
                     }
                     .listStyle(.plain)
@@ -105,7 +103,7 @@ struct TransportView: View {
                 }
                 .frame(width: 343, height: 60)
                 .background(.blueUniversal)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .clipShape(.rect(cornerRadius: 16))
                 .padding(.bottom, 24)
             }
         }
