@@ -27,7 +27,7 @@ struct SearchCityView: View {
             SearchBar(searchText: $searchString)
             if !searchString.isEmpty && searchResults.isEmpty {
                 ContentUnavailableView {
-                    Text(Constants.cityIsNotFoundText)
+                    Text("City not found")
                         .font(.system(size: 24, weight: .bold))
                 }
             } else {
@@ -36,7 +36,7 @@ struct SearchCityView: View {
                         HStack {
                             Text(city.name)
                             Spacer()
-                            Image("Chevron")
+                            Image(.chevron)
                                 .padding(.trailing, 18)
                         }
                         .padding(.leading)
@@ -67,7 +67,7 @@ struct SearchCityView: View {
             }
         }
         .background(.whiteYP)
-        .navigationTitle(Constants.chooseCityText)
+        .navigationTitle("City selection")
         .toolbarRole(.editor)
         .toolbar(.hidden, for: .tabBar)
     }

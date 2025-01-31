@@ -25,7 +25,7 @@ struct TransportView: View {
                 }
                 
                 if viewModel.getListOfRoutes().isEmpty {
-                    Text(Constants.noOptionsText)
+                    Text("There are no options")
                         .font(.system(size: 24, weight: .bold))
                         .foregroundStyle(.blackYP)
                 } else {
@@ -97,7 +97,7 @@ struct TransportView: View {
                 Button {
                     path.append("FiltersView")
                 } label: {
-                    Text(Constants.specifyTimeButtonText)
+                    Text("Specify the time")
                         .foregroundStyle(.whiteUniversal)
                         .font(.system(size: 17, weight: .bold))
                 }

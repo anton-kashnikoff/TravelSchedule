@@ -22,7 +22,7 @@ struct FiltersView: View {
     
     var body: some View {
         VStack {
-            Text(Constants.departureTimeText)
+            Text("Departure time")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.blackYP)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -72,14 +72,14 @@ struct FiltersView: View {
             .frame(height: 60)
             .padding([.leading, .trailing])
 
-            Text(Constants.transfersOptionsText)
+            Text("Show options with transfers")
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.blackYP)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
             
             HStack {
-                Text(Constants.yesText)
+                Text("Yes")
                     .font(.system(size: 17))
                     .foregroundStyle(.blackYP)
                 Spacer()
@@ -93,7 +93,7 @@ struct FiltersView: View {
             .padding([.leading, .trailing])
             
             HStack {
-                Text(Constants.noText)
+                Text("No")
                     .font(.system(size: 17))
                     .foregroundStyle(.blackYP)
                 Spacer()
@@ -110,7 +110,7 @@ struct FiltersView: View {
             
             if isYes || isNo {
                 BlueButton(
-                    text: Constants.applyButtonText,
+                    text: "Apply",
                     size: CGSize(width: 343, height: 60)
                 ) { path.removeLast() }
             }

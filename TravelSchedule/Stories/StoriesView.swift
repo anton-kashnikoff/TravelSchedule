@@ -9,10 +9,10 @@ import SwiftUI
 
 struct StoriesView: View {
     private var timerConfiguration: TimerConfiguration {
-        .init(storiesCount: viewModel.stories.count)
+        TimerConfiguration(storiesCount: viewModel.stories.count)
     }
     
-    @State private var currentProgress: CGFloat = 0
+    @State private var currentProgress = CGFloat.zero
     
     @ObservedObject var viewModel: ScheduleViewModel
 

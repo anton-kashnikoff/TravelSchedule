@@ -36,12 +36,12 @@ struct ContentView: View {
             TabView {
                 ScheduleView(viewModel: viewModel)
                     .tabItem {
-                        Image("Schedule")
+                        Image(.schedule)
                     }
                 
                 SettingsView(darkModeEnabled: $darkModeEnabled)
                     .tabItem {
-                        Image("Settings")
+                        Image(.settings)
                     }
             }
             .tint(.accent)

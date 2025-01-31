@@ -16,7 +16,7 @@ final class DateCreator {
         dateComponents.hour = hour
         dateComponents.minute = minute
         
-        guard let someDate = Calendar(identifier: .gregorian).date(from: dateComponents) else { return Date.now }
+        guard let someDate = Calendar(identifier: .gregorian).date(from: dateComponents) else { return .now }
         return someDate
     }
     

@@ -13,9 +13,9 @@ struct ErrorView: View {
     var body: some View {
         switch errorType {
         case .serverError:
-            ContentUnavailableView(Constants.serverErrorText, image: "Server Error")
+            ContentUnavailableView("Server error", image: "Server Error")
         case .noInternetConnection:
-            ContentUnavailableView(Constants.internetErrorText, image: "No Internet")
+            ContentUnavailableView("There is no internet connection", image: "No Internet")
         }
     }
 }

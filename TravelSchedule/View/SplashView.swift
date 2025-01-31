@@ -11,13 +11,18 @@ struct SplashView: View {
     @Binding var isActive: Bool
     
     var body: some View {
-        Image("Splash Screen")
+        Image(.splashScreen)
             .resizable()
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .frame(
+                minWidth: .zero,
+                maxWidth: .infinity,
+                minHeight: .zero,
+                maxHeight: .infinity
+            )
             .ignoresSafeArea()
             .onAppear {
                 withAnimation(.easeIn(duration: 0.7)) {}
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     withAnimation {
                         self.isActive = true
                     }

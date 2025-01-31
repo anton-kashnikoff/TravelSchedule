@@ -15,22 +15,19 @@ struct StoryView: View {
             .resizable()
             .clipShape(.rect(cornerRadius: Constants.storyCornerRadius))
             .overlay(
-                VStack {
-                    Spacer()
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(story.title)
+                        .font(.bold34)
+                        .lineLimit(2)
+                        .foregroundStyle(.whiteUniversal)
                     
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text(story.title)
-                            .font(.bold34)
-                            .lineLimit(2)
-                            .foregroundStyle(.whiteUniversal)
-                        
-                        Text(story.description)
-                            .font(.regular20)
-                            .lineLimit(3)
-                            .foregroundStyle(.whiteUniversal)
-                    }
-                    .padding(.init(top: 0, leading: 16, bottom: 40, trailing: 16))
+                    Text(story.description)
+                        .font(.regular20)
+                        .lineLimit(3)
+                        .foregroundStyle(.whiteUniversal)
                 }
+                .padding(.init(top: 0, leading: 16, bottom: 40, trailing: 16))
+                .frame(maxHeight: .infinity, alignment: .bottom)
             )
     }
 }

@@ -14,23 +14,17 @@ struct SettingsView: View {
     
     var body: some View {
             VStack {
-                HStack {
-                    Text(Constants.darkThemeText)
-                        .padding(.leading)
-                        .foregroundStyle(.blackYP)
-                    
-                    Spacer()
-                    Toggle("", isOn: $darkModeEnabled)
-                        .padding(.trailing)
-                        .tint(.blueUniversal)
-                        .onChange(of: darkModeEnabled) {
-                            ThemeManager.shared.handleTheme(darkMode: darkModeEnabled)
-                        }
-                }
-                .frame(height: 60)
+                Toggle("Dark mode", isOn: $darkModeEnabled)
+                    .frame(height: 60)
+                    .foregroundStyle(.blackYP)
+                    .padding([.leading, .trailing])
+                    .tint(.blueUniversal)
+                    .onChange(of: darkModeEnabled) {
+                        ThemeManager.shared.handleTheme(darkMode: darkModeEnabled)
+                    }
                 
                 HStack {
-                    Text(Constants.privacyPolicyText)
+                    Text("User agreement")
                         .padding(.leading)
                         .foregroundStyle(.blackYP)
                     
@@ -44,14 +38,14 @@ struct SettingsView: View {
                 }
                 
                 Spacer()
-                Text(Constants.apiAlertText)
+                Text("The application uses the Yandex.Schedules API")
                     .font(.system(size: 12))
                     .foregroundStyle(.blackYP)
                 
                 Spacer()
                     .frame(height: 16)
                 
-                Text(Constants.apiVersionText)
+                Text("Version 1.0 (beta)")
                     .font(.system(size: 12))
                     .foregroundStyle(.blackYP)
                 

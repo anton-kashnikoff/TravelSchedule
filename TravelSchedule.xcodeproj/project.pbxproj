@@ -11,7 +11,6 @@
 		CB16BC162C15BB6B00EBEBD0 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC152C15BB6B00EBEBD0 /* Story.swift */; };
 		CB16BC182C15BC0500EBEBD0 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC172C15BC0500EBEBD0 /* StoriesView.swift */; };
 		CB16BC1A2C15BC2E00EBEBD0 /* TimerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC192C15BC2E00EBEBD0 /* TimerConfiguration.swift */; };
-		CB16BC1C2C15BCD300EBEBD0 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC1B2C15BCD300EBEBD0 /* CloseButton.swift */; };
 		CB16BC1F2C15BDB500EBEBD0 /* StoriesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC1E2C15BDB500EBEBD0 /* StoriesTabView.swift */; };
 		CB16BC222C15BDDC00EBEBD0 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC212C15BDDC00EBEBD0 /* StoryView.swift */; };
 		CB16BC252C15BE9B00EBEBD0 /* StoriesProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16BC242C15BE9B00EBEBD0 /* StoriesProgressBar.swift */; };
@@ -26,7 +25,6 @@
 		CB3E15F72BCD8197004C9E8F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15F62BCD8197004C9E8F /* SplashView.swift */; };
 		CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */; };
 		CB4D71662BD422A600D5DCF9 /* TransportOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */; };
-		CB4D71692BD4381F00D5DCF9 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4D71682BD4381F00D5DCF9 /* PrivacyPolicyView.swift */; };
 		CB4FDC442B9CA829005E1EF9 /* SearchRoutesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */; };
 		CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */; };
 		CB4FDC492B9CAA6C005E1EF9 /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */; };
@@ -43,6 +41,8 @@
 		CB9CF5742D4C0C79003D6099 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9CF5732D4C0C79003D6099 /* Configuration.swift */; };
 		CB9CF5812D4C1A9D003D6099 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9CF5802D4C1A9D003D6099 /* BlueButton.swift */; };
 		CB9CF5AC2D4C2257003D6099 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9CF5AB2D4C2257003D6099 /* WebView.swift */; };
+		CB9DB7DA2D4D47D2003C2592 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CB9DB7D92D4D47D2003C2592 /* Localizable.xcstrings */; };
+		CB9DB7EF2D4D5935003C2592 /* ScheduleSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9DB7EE2D4D5935003C2592 /* ScheduleSearchView.swift */; };
 		CBB0690A2BD2E41300B1EC90 /* TransportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB069092BD2E41300B1EC90 /* TransportView.swift */; };
 		CBB0690D2BD2E53E00B1EC90 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0690C2BD2E53E00B1EC90 /* Route.swift */; };
 		CBB0690F2BD2E7C700B1EC90 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB0690E2BD2E7C700B1EC90 /* DateCreator.swift */; };
@@ -71,7 +71,6 @@
 		CB16BC152C15BB6B00EBEBD0 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		CB16BC172C15BC0500EBEBD0 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		CB16BC192C15BC2E00EBEBD0 /* TimerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerConfiguration.swift; sourceTree = "<group>"; };
-		CB16BC1B2C15BCD300EBEBD0 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		CB16BC1E2C15BDB500EBEBD0 /* StoriesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTabView.swift; sourceTree = "<group>"; };
 		CB16BC212C15BDDC00EBEBD0 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		CB16BC242C15BE9B00EBEBD0 /* StoriesProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesProgressBar.swift; sourceTree = "<group>"; };
@@ -87,7 +86,6 @@
 		CB3E15F62BCD8197004C9E8F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CB4D71652BD422A600D5DCF9 /* TransportOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportOperator.swift; sourceTree = "<group>"; };
-		CB4D71682BD4381F00D5DCF9 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
 		CB4FDC432B9CA829005E1EF9 /* SearchRoutesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoutesService.swift; sourceTree = "<group>"; };
 		CB4FDC462B9CA9C4005E1EF9 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		CB4FDC482B9CAA6C005E1EF9 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
@@ -104,6 +102,8 @@
 		CB9CF5732D4C0C79003D6099 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		CB9CF5802D4C1A9D003D6099 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
 		CB9CF5AB2D4C2257003D6099 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		CB9DB7D92D4D47D2003C2592 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		CB9DB7EE2D4D5935003C2592 /* ScheduleSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSearchView.swift; sourceTree = "<group>"; };
 		CBB069092BD2E41300B1EC90 /* TransportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportView.swift; sourceTree = "<group>"; };
 		CBB0690C2BD2E53E00B1EC90 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		CBB0690E2BD2E7C700B1EC90 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				CB16BC132C15BB0800EBEBD0 /* StoriesMainView.swift */,
-				CB16BC1B2C15BCD300EBEBD0 /* CloseButton.swift */,
 				CB16BC172C15BC0500EBEBD0 /* StoriesView.swift */,
 				CB16BC242C15BE9B00EBEBD0 /* StoriesProgressBar.swift */,
 				CB16BC272C15BF0600EBEBD0 /* ProgressBar.swift */,
@@ -197,6 +196,7 @@
 				CBE2D6752B96464200924855 /* openapi.yaml */,
 				CBE2D6772B96466C00924855 /* openapi-generator-config.yaml */,
 				CBE09FBC2BD4720D00EF4DE0 /* Info.plist */,
+				CB9DB7D92D4D47D2003C2592 /* Localizable.xcstrings */,
 				CB9CF5732D4C0C79003D6099 /* Configuration.swift */,
 				CB2477422B90CE6100E41476 /* Preview Content */,
 			);
@@ -246,11 +246,11 @@
 		CBB6A3332BD05060005505C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB9DB7EE2D4D5935003C2592 /* ScheduleSearchView.swift */,
 				CB9CF57D2D4C1A8B003D6099 /* Components */,
 				CB3E15F62BCD8197004C9E8F /* SplashView.swift */,
 				CB24773E2B90CE6000E41476 /* ContentView.swift */,
 				CB3E15FB2BCDAC9E004C9E8F /* ScheduleView.swift */,
-				CB4D71682BD4381F00D5DCF9 /* PrivacyPolicyView.swift */,
 				CBB069092BD2E41300B1EC90 /* TransportView.swift */,
 				CB7D7BC52BD3DA1F00832B55 /* FiltersView.swift */,
 				CB7D7BCE2BD3E83200832B55 /* TransportOperatorInfoView.swift */,
@@ -332,11 +332,13 @@
 			};
 			buildConfigurationList = CB2477342B90CE6000E41476 /* Build configuration list for PBXProject "TravelSchedule" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				fr,
 			);
 			mainGroup = CB2477302B90CE6000E41476;
 			packageReferences = (
@@ -360,6 +362,7 @@
 			files = (
 				CB2477442B90CE6100E41476 /* Preview Assets.xcassets in Resources */,
 				CBE2D6782B96466C00924855 /* openapi-generator-config.yaml in Resources */,
+				CB9DB7DA2D4D47D2003C2592 /* Localizable.xcstrings in Resources */,
 				CB2477412B90CE6100E41476 /* Assets.xcassets in Resources */,
 				CBE09FB82BD4702300EF4DE0 /* Launch Screen.storyboard in Resources */,
 				CBE2D6762B96464200924855 /* openapi.yaml in Resources */,
@@ -388,7 +391,6 @@
 				CB16BC222C15BDDC00EBEBD0 /* StoryView.swift in Sources */,
 				CB4FDC472B9CA9C4005E1EF9 /* ScheduleService.swift in Sources */,
 				CBB6A3392BD0529C005505C9 /* ErrorType.swift in Sources */,
-				CB16BC1C2C15BCD300EBEBD0 /* CloseButton.swift in Sources */,
 				CBBFFBC92BCED43200C2482B /* SearchBar.swift in Sources */,
 				CB16BC282C15BF0600EBEBD0 /* ProgressBar.swift in Sources */,
 				CB4FDC512B9CACEB005E1EF9 /* StationsListService.swift in Sources */,
@@ -411,13 +413,13 @@
 				CBB0690F2BD2E7C700B1EC90 /* DateCreator.swift in Sources */,
 				CB3E15FC2BCDAC9E004C9E8F /* ScheduleView.swift in Sources */,
 				CB16BC362C15D16200EBEBD0 /* StoryItemView.swift in Sources */,
+				CB9DB7EF2D4D5935003C2592 /* ScheduleSearchView.swift in Sources */,
 				CB16BC332C15D12200EBEBD0 /* StoriesScrollView.swift in Sources */,
 				CBBFFBC62BCECD9400C2482B /* ScheduleViewModel.swift in Sources */,
 				CB16BC302C15CC1D00EBEBD0 /* Font+Extensions.swift in Sources */,
 				CB4FDC532B9CAD37005E1EF9 /* CopyrightService.swift in Sources */,
 				CBCD08F22C301866009B12BF /* MaskView.swift in Sources */,
 				CBBFFBD12BCEF6F600C2482B /* SearchStationView.swift in Sources */,
-				CB4D71692BD4381F00D5DCF9 /* PrivacyPolicyView.swift in Sources */,
 				CBB0690A2BD2E41300B1EC90 /* TransportView.swift in Sources */,
 				CB16BC182C15BC0500EBEBD0 /* StoriesView.swift in Sources */,
 				CBB0690D2BD2E53E00B1EC90 /* Route.swift in Sources */,
@@ -495,6 +497,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -551,6 +554,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -570,8 +574,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,8 +609,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

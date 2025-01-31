@@ -12,7 +12,7 @@ struct BlueButton: View {
         RoundedRectangle(cornerRadius: 16)
     }()
     
-    let text: String
+    let text: LocalizedStringResource
     let size: CGSize
     let action: () -> Void
     
@@ -30,5 +30,5 @@ struct BlueButton: View {
 }
 
 #Preview {
-    BlueButton(text: "Найти", size: CGSize(width: 150, height: 60)) {}
+    BlueButton(text: "Find", size: CGSize(width: 150, height: 60)) {}
 }

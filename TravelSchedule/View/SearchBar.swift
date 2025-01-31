@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct SearchBar: View {
-    private let placeholder = Constants.searchBarPlaceholder
-    
     @State private var isSearching = false
     
     @Binding var searchText: String
@@ -18,7 +16,7 @@ struct SearchBar: View {
         HStack(spacing: .zero) {
             HStack(spacing: .zero) {
                 HStack {
-                    TextField(placeholder, text: $searchText)
+                    TextField("Type a request", text: $searchText)
                         .font(.system(size: 17))
                         .foregroundStyle(.blackYP)
                         .padding(.leading, 8)

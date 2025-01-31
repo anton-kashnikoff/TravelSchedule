@@ -38,7 +38,7 @@ struct SearchStationView: View {
             SearchBar(searchText: $searchString)
             if !searchString.isEmpty && searchResults.isEmpty {
                 ContentUnavailableView {
-                    Text(Constants.stationIsNotFoundText)
+                    Text("Station not found")
                         .font(.system(size: 24, weight: .bold))
                 }
             } else {
@@ -47,7 +47,7 @@ struct SearchStationView: View {
                         HStack {
                             Text(station)
                             Spacer()
-                            Image("Chevron")
+                            Image(.chevron)
                                 .padding(.trailing, 18)
                         }
                         .padding(.leading)
@@ -72,7 +72,7 @@ struct SearchStationView: View {
             }
         }
         .background(.whiteYP)
-        .navigationTitle(Constants.chooseStationText)
+        .navigationTitle("Station selection")
         .toolbarRole(.editor)
         .toolbar(.hidden, for: .tabBar)
     }

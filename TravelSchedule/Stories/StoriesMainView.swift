@@ -17,9 +17,11 @@ struct StoriesMainView: View {
             StoriesView(
                 viewModel: viewModel
             )
-            
-            CloseButton {
+
+            Button {
                 path.removeLast()
+            } label: {
+                Image(.close)
             }
             .padding(.top, 57)
             .padding(.trailing, 12)

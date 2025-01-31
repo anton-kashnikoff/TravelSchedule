@@ -29,44 +29,12 @@ struct ScheduleView: View {
                             .frame(height: 128)
                             .clipShape(.rect(cornerRadius: 20))
                         
-                        HStack(spacing: 16) {
-                            VStack(alignment: .leading, spacing: 28) {
-                                Text(viewModel.routeFrom ?? Constants.fromText)
-                                    .foregroundStyle(
-                                        viewModel.selectedCityFrom == nil ? .grayUniversal : .blackUniversal
-                                    )
-                                    .onTapGesture {
-                                        path.append("SearchCityViewFrom")
-                                    }
-                                
-                                Text(viewModel.routeTo ?? Constants.toText)
-                                    .foregroundStyle(
-                                        viewModel.selectedCityTo == nil ? .grayUniversal : .blackUniversal
-                                    )
-                                    .onTapGesture {
-                                        path.append("SearchCityViewTo")
-                                    }
-                            }
-                            .lineLimit(1)
-                            .padding(.leading)
-                            .frame(height: 96)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .background(.whiteUniversal)
-                            .clipShape(.rect(cornerRadius: 20))
-                            .padding(.leading, 16)
-                            
-                            Button(action: viewModel.swapDirections) {
-                                Image("Сhange")
-                                    .resizable()
-                                    .frame(width: 36, height: 36)
-                                    .padding(.trailing, 16)
-                            }
-                        }
+                        ScheduleSearchView(viewModel: viewModel, path: $path)
                     }
                     .padding(.horizontal, 10)
                     
                     BlueButton(
-                        text: Constants.findButtonText,
+                        text: "Find",
                         size: CGSize(width: 150, height: 60)
                     ) { path.append("TransportView") }
                     .opacity(

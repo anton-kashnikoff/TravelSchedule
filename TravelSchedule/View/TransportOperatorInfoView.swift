@@ -25,7 +25,7 @@ struct TransportOperatorInfoView: View {
             
             VStack(spacing: .zero) {
                 VStack {
-                    Text(Constants.emailText)
+                    Text("E-mail")
                         .font(.system(size: 17))
                         .foregroundStyle(.blackYP)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -39,7 +39,7 @@ struct TransportOperatorInfoView: View {
                 .padding(.leading)
                 
                 VStack {
-                    Text(Constants.phoneText)
+                    Text("Phone number")
                         .font(.system(size: 17))
                         .foregroundStyle(.blackYP)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -54,7 +54,7 @@ struct TransportOperatorInfoView: View {
             }
             Spacer()
         }
-        .navigationTitle(Constants.transportOperatorInfoText)
+        .navigationTitle("Information about the transport company")
         .toolbarRole(.editor)
         .background(.whiteYP)
     }

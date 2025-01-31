@@ -40,12 +40,12 @@ final class ScheduleViewModel: ObservableObject {
         return "\(routeFrom) -> \(routeTo)"
     }
     
-    var departureTime: [String] {
+    var departureTime: [LocalizedStringResource] {
         [
-            Constants.morningText,
-            Constants.dayText,
-            Constants.eveningText,
-            Constants.nightText
+            "Morning 06:00 - 12:00",
+            "Day 12:00 - 18:00",
+            "Evening 18:00 - 00:00",
+            "Night 00:00 - 06:00"
         ]
     }
     
